@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Juego_de_Tronos {
     public static void main(String[] args) {
 
@@ -38,7 +39,9 @@ public class Juego_de_Tronos {
 
             if (opciones1 == 1) {
 
-                System.out.println("\n\nEstás de camino a Roca Dragón. ");
+                imprimirLento("\n\nEstás de camino a Roca Dragón, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                juegoAhorcado juego = new juegoAhorcado();
+                juego.jugarAhorcado();
 
             }
 
@@ -62,6 +65,9 @@ public class Juego_de_Tronos {
 
             if (opciones2 == 1) {
 
+                imprimirLento("\n\nEstás de camino a la Bahía de los esclavos, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                juegoAhorcado juego = new juegoAhorcado();
+                juego.jugarAhorcado();
 
 
             }
@@ -85,6 +91,9 @@ public class Juego_de_Tronos {
 
             if(opciones3 == 1){
 
+                imprimirLento("\n\nEstás de camino a El Muro, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                juegoAhorcado juego = new juegoAhorcado();
+                juego.jugarAhorcado();
 
 
             }
@@ -102,8 +111,9 @@ public class Juego_de_Tronos {
                 e.printStackTrace();
             }
         }
-        System.out.println(); // Salto de línea al final
+        System.out.println();
     }
+
 
 
 }
