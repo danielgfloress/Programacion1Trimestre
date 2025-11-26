@@ -15,6 +15,11 @@ public class Juego_de_Tronos {
         imprimirDespacio imprimir = new imprimirDespacio();
 
         int opciones;
+        int a = 1;
+        int b = 2;
+        int c = 3;
+
+
 
 
         imprimir.imprimirLento("\nComienza la aventura y tienes que hacerte con el trono de hierro, consigue el personaje que más te guste e intenta hacerte con el trono de hierro superando todos los peligros que aparecen por el camino.\n", 10);
@@ -47,10 +52,27 @@ public class Juego_de_Tronos {
             if (opciones1 == 1) {
 
                 imprimir.imprimirLento("\n\nEstás de camino a Roca Dragón, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado();
+                juego.jugarAhorcado(a);
+                boolean resultadoDelAhorcado = juego.jugarAhorcado(a);
+
+
 
             }
 
+            else if (opciones1 == 2) {
+
+                imprimir.imprimirLento("\n\nEstás de camino al Nido de Águilas, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                juego.jugarAhorcado(b);
+                boolean resultadoDelAhorcado = juego.jugarAhorcado(b);
+
+
+            } else if (opciones1==3) {
+
+                imprimir.imprimirLento("\n\nEstás de camino a Invernalia, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                juego.jugarAhorcado(c);
+                boolean resultadoDelAhorcado = juego.jugarAhorcado(c);
+
+            }
 
         }
 
@@ -75,8 +97,29 @@ public class Juego_de_Tronos {
             if (opciones2 == 1) {
 
                 imprimir.imprimirLento("\n\nEstás de camino a la Bahía de los esclavos, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado();
+                juego.jugarAhorcado(a);
+                boolean resultadoDelAhorcado = juego.jugarAhorcado(a);
 
+                if (!resultadoDelAhorcado) {
+                    System.out.println("Has muerto en la historia de Juego de Tronos...");
+                    System.out.println("Fin del juego");
+                    return;
+                }
+
+                imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
+
+            } else if (opciones2 == 2) {
+
+                imprimir.imprimirLento("\n\nEstás de camino a la Yunkai, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                juego.jugarAhorcado(b);
+                boolean resultadoDelAhorcado = juego.jugarAhorcado(b);
+
+            } else if (opciones2 == 3) {
+
+                imprimir.imprimirLento("\n\nEstás de camino a la Astapor, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                juego.jugarAhorcado(c);
+                boolean resultadoDelAhorcado = juego.jugarAhorcado(c);
 
             }
 
@@ -103,8 +146,21 @@ public class Juego_de_Tronos {
             if(opciones3 == 1){
 
                 imprimir.imprimirLento("\n\nEstás de camino a El Muro, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado();
+                juego.jugarAhorcado(a);
+                boolean resultadoDelAhorcado = juego.jugarAhorcado(a);
 
+
+            } else if (opciones3 == 2) {
+
+                imprimir.imprimirLento("\n\nEstás de camino al Pueblo de los salvajes, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                juego.jugarAhorcado(b);
+                boolean resultadoDelAhorcado = juego.jugarAhorcado(b);
+
+            } else if (opciones3 == 3) {
+
+                imprimir.imprimirLento("\n\nEstás de camino a la Casa Craster, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                juego.jugarAhorcado(c);
+                boolean resultadoDelAhorcado = juego.jugarAhorcado(c);
 
             }
 
