@@ -152,6 +152,10 @@ public class juegoAhorcado {
 
         }
 
-    return ganado;}
+        return ganado;
+
+    }
+
+
 
 }

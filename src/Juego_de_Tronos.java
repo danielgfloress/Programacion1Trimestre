@@ -13,6 +13,7 @@ public class Juego_de_Tronos {
         Scanner sc = new Scanner(System.in);
         juegoAhorcado juego = new juegoAhorcado();
         imprimirDespacio imprimir = new imprimirDespacio();
+        boolean resultadoDelAhorcado;
 
         int opciones;
         int a = 1;
@@ -52,8 +53,7 @@ public class Juego_de_Tronos {
             if (opciones1 == 1) {
 
                 imprimir.imprimirLento("\n\nEstás de camino a Roca Dragón, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado(a);
-                boolean resultadoDelAhorcado = juego.jugarAhorcado(a);
+                resultadoDelAhorcado = juego.jugarAhorcado(a);
 
 
 
@@ -62,15 +62,13 @@ public class Juego_de_Tronos {
             else if (opciones1 == 2) {
 
                 imprimir.imprimirLento("\n\nEstás de camino al Nido de Águilas, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado(b);
-                boolean resultadoDelAhorcado = juego.jugarAhorcado(b);
+                resultadoDelAhorcado = juego.jugarAhorcado(b);
 
 
             } else if (opciones1==3) {
 
                 imprimir.imprimirLento("\n\nEstás de camino a Invernalia, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado(c);
-                boolean resultadoDelAhorcado = juego.jugarAhorcado(c);
+                resultadoDelAhorcado = juego.jugarAhorcado(c);
 
             }
 
@@ -94,32 +92,30 @@ public class Juego_de_Tronos {
             System.out.println(BLUE + "3. Astapor" + RESET);
             opciones2 = sc.nextInt();
 
-            if (opciones2 == 1) {
+            switch (opciones2){
 
+                case 1:
                 imprimir.imprimirLento("\n\nEstás de camino a la Bahía de los esclavos, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado(a);
-                boolean resultadoDelAhorcado = juego.jugarAhorcado(a);
+                resultadoDelAhorcado = juego.jugarAhorcado(a);
 
                 if (!resultadoDelAhorcado) {
                     System.out.println("Has muerto en la historia de Juego de Tronos...");
                     System.out.println("Fin del juego");
-                    return;
+                    break;
                 }
 
                 imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
 
 
-            } else if (opciones2 == 2) {
+                case 2:
 
                 imprimir.imprimirLento("\n\nEstás de camino a la Yunkai, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado(b);
-                boolean resultadoDelAhorcado = juego.jugarAhorcado(b);
+                resultadoDelAhorcado = juego.jugarAhorcado(b);
 
-            } else if (opciones2 == 3) {
+            case 3:
 
                 imprimir.imprimirLento("\n\nEstás de camino a la Astapor, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado(c);
-                boolean resultadoDelAhorcado = juego.jugarAhorcado(c);
+                resultadoDelAhorcado = juego.jugarAhorcado(c);
 
             }
 
@@ -143,24 +139,23 @@ public class Juego_de_Tronos {
             System.out.println(RED + "3. Casa Craster" + RESET);
             opciones3 = sc.nextInt();
 
-            if(opciones3 == 1){
+            switch (opciones3){
+
+                case 1:
 
                 imprimir.imprimirLento("\n\nEstás de camino a El Muro, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado(a);
-                boolean resultadoDelAhorcado = juego.jugarAhorcado(a);
+                resultadoDelAhorcado = juego.jugarAhorcado(a);
 
 
-            } else if (opciones3 == 2) {
+                case 2:
 
                 imprimir.imprimirLento("\n\nEstás de camino al Pueblo de los salvajes, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado(b);
-                boolean resultadoDelAhorcado = juego.jugarAhorcado(b);
+                resultadoDelAhorcado = juego.jugarAhorcado(b);
 
-            } else if (opciones3 == 3) {
+                case 3:
 
                 imprimir.imprimirLento("\n\nEstás de camino a la Casa Craster, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
-                juego.jugarAhorcado(c);
-                boolean resultadoDelAhorcado = juego.jugarAhorcado(c);
+                resultadoDelAhorcado = juego.jugarAhorcado(c);
 
             }
 
