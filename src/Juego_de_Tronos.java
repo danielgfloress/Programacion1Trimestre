@@ -57,6 +57,8 @@ public class Juego_de_Tronos {
 
 
 
+
+
             }
 
             else if (opciones1 == 2) {
@@ -98,25 +100,52 @@ public class Juego_de_Tronos {
                 imprimir.imprimirLento("\n\nEstás de camino a la Bahía de los esclavos, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(a);
 
-                if (!resultadoDelAhorcado) {
-                    System.out.println("Has muerto en la historia de Juego de Tronos...");
-                    System.out.println("Fin del juego");
+                if (!resultadoDelAhorcado){
+
+                    juego.perderTexto();
                     break;
+
                 }
+
 
                 imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
 
 
+                break;
                 case 2:
 
                 imprimir.imprimirLento("\n\nEstás de camino a la Yunkai, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(b);
 
-            case 3:
+                if (!resultadoDelAhorcado){
+
+                        juego.perderTexto();
+                        break;
+
+                    }
+
+
+                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
+
+                break;
+                case 3:
 
                 imprimir.imprimirLento("\n\nEstás de camino a la Astapor, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(c);
 
+                    if (!resultadoDelAhorcado){
+
+                        juego.perderTexto();
+                        break;
+
+                    }
+
+
+                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
+
+                break;
             }
 
 
@@ -147,19 +176,58 @@ public class Juego_de_Tronos {
                 resultadoDelAhorcado = juego.jugarAhorcado(a);
 
 
+                    if (!resultadoDelAhorcado){
+
+                        juego.perderTexto();
+                        break;
+
+                    }
+
+
+                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
+
+                break;
                 case 2:
 
                 imprimir.imprimirLento("\n\nEstás de camino al Pueblo de los salvajes, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(b);
 
+                    if (!resultadoDelAhorcado){
+
+                        juego.perderTexto();
+                        break;
+
+                    }
+
+
+                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
+
+                break;
                 case 3:
 
                 imprimir.imprimirLento("\n\nEstás de camino a la Casa Craster, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(c);
 
+                    if (!resultadoDelAhorcado){
+
+                        juego.perderTexto();
+                        break;
+
+                    }
+
+
+                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
+
+                break;
             }
 
         }
+
+
+
 
     }
 
