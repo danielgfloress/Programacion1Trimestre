@@ -16,6 +16,7 @@ public class Juego_de_Tronos {
         imprimirDespacio imprimir = new imprimirDespacio();
         RefactorizarTexto ref = new RefactorizarTexto();
         Inventarios inventario = new Inventarios();
+        MapaCastillo mapa = new MapaCastillo();
         boolean resultadoDelAhorcado;
 
         int opciones;
@@ -141,10 +142,10 @@ public class Juego_de_Tronos {
 
                 }
 
-                imprimir.imprimirLento("Has conseguido superar a los caballeros sigilosamente y sigues tu camino hacia la Bahía de los esclavos", 10);
-                imprimir.imprimirLento("\n\n\nHAS LLEGADO A LA BAHÍA DE LOS ESCLAVOS", 10);
+                imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente y sigues tu camino hacia la Bahía de los esclavos", 10);
+                imprimir.imprimirLento("\n\n\nHAS LLEGADO A LA BAHÍA DE LOS ESCLAVOS\n", 10);
                 imprimir.imprimirLento("Conquista la Bahía de los esclavos, A POR TODAS", 10);
-                imprimir.imprimirLento("Usa algo del inventario para atacar", 10);
+                imprimir.imprimirLento("Usa algo del inventario para atacar\n", 10);
 
                 System.out.println(Arrays.toString(inventario.inventarioDanny(0)));
 
@@ -154,11 +155,39 @@ public class Juego_de_Tronos {
 
                     case 1:
 
-                        inventario.inventarioDanny(1);
+                        inventario.inventarioDanny(a);
 
-                        imprimir.imprimirLento("Has escogido usar tus gragones", 10);
-                        imprimir.imprimirLento("La batalla ha comenzado y llegas con tus dragones. El pueblo de la Bahía de los esclavos se queda aterrorizado y comienzas a quemar todo lo que te encuentras en tu camino derrotando a su ejército y haciéndote con la Bahía de los esclavos. Sin embargo, derrotan a tus dragones y avanzas sin ellos.", 10);
+                        imprimir.imprimirLento(RED + "\nHAS ELEGIDO USAR A TUS DRAGONES\n" + RESET, 10);
+                        imprimir.imprimirLento(RED + "La batalla ha comenzado y llegas con tus dragones. El pueblo de la Bahía de los esclavos se queda aterrorizado y comienzas a quemar todo lo que te encuentras en tu camino derrotando a su ejército y haciéndote con la Bahía de los esclavos. Sin embargo, derrotan a tus dragones y avanzas sin ellos." + RESET, 10);
 
+
+                    case 2:
+
+                        inventario.inventarioDanny(b);
+
+                        imprimir.imprimirLento(GREEN + "\nHAS ELEGIDO USAR TU EJÉRCITO" + RESET, 10);
+                        imprimir.imprimirLento(GREEN + "Tu ejército se ha revelado contra ti en su pueblo y has caído en manos de su rey, prueba otros caminos si quieres llegar al trono" + RESET, 10);
+                        System.out.println(Arrays.toString(inventario.inventarioDanny(b)));
+
+                    case 3:
+
+                        inventario.inventarioDanny(c);
+
+                        imprimir.imprimirLento(BLUE + "HAS ELEGIDO USAR A JORAH PARA INFILTRARSE EN SU CASTILLO" + RESET, 10);
+                        imprimir.imprimirLento(BLUE + "Jorah se ha conseguido infiltrar en su castillo pero para acceder al lugar donde se encuentra el rey debe pensar rapido y elegir. Si las puertas que eliges están cerradas y hacen ruido si intentas abrirlas, a las 3 puertas que intentes abrir y estém cerradas te capturarán. TEN CUIDADO" + RESET, 10);
+
+                        if(!mapa.ejecutarMapa()){
+
+                        break;
+
+                        }
+
+                        imprimir.imprimirLento(BLUE + "\nTE HAS COLADO EN LA HABITACIÓN DEL REY Y HAS CONSEGUIDO CONQUISTAR LA CIUDAD GRACIAS A JORAH ", 10);
+
+
+
+
+                        break;
 
                 }
 
@@ -294,7 +323,6 @@ public class Juego_de_Tronos {
 
         }
 
-        System.out.println("PRUEBA OTRA VEZ");
 
     }
 

@@ -1,14 +1,20 @@
 public class Inventarios {
 
-    public final String vacio= "vacio";
+    final String RESET = "\u001B[0m";
+    final String RED = "\u001B[31m";
+    final String GREEN = "\u001B[32m";
+    final String YELLOW = "\u001B[33m";
+    final String BLUE = "\u001B[34m";
+
+    public final String vacio= (YELLOW +"vacio" + RESET);
 
     public final String jon_espada = "Espada";
     public final String jon_fantasma = "Lobo2";
     public final String jon_ejercito = "Ejército";
 
-    public final String dragones = "Dragones";
-    public final String danny_ejercitos = "Ejército";
-    public final String jorah = "Jorah";
+    public final String dragones = (RED + "1. Dragones"+ RESET);
+    public final String danny_ejercitos =(GREEN + "2. Ejército" + RESET);
+    public final String jorah = (BLUE + "3. Jorah" + RESET);
 
     public String[] inventarioDanny (int objeto){
 
@@ -22,6 +28,19 @@ public class Inventarios {
         if (objeto == 1){
 
             inventario[0] = vacio;
+
+        }
+
+        if (objeto == 2){
+
+            inventario[0] = (RED + "HAS" + RESET);
+            inventario[1] = (RED + "PERDIDO" + RESET);
+            inventario[2] = (RED + "REY" + RESET);
+        }
+
+        if (objeto == 3){
+
+            inventario[2] = vacio;
 
         }
 

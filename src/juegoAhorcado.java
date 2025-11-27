@@ -70,7 +70,7 @@ public class juegoAhorcado {
             while (vidas > 0 && !ganado) {
 
 
-                imprimir.imprimirLento("\nAdivina la palabra para continuar. Pista: Como llaman a los del norte del muro" + String.valueOf(progreso), 10);
+                imprimir.imprimirLento("\nAdivina la palabra para continuar. Pista: Como llaman a los del norte del muro: " + String.valueOf(progreso), 10);
                 System.out.println("Vidas restantes: " + vidas);
                 System.out.print("Ingresa una letra: ");
                 char letra = Character.toUpperCase(sc.next().charAt(0));
@@ -115,8 +115,7 @@ public class juegoAhorcado {
 
             while (vidas > 0 && !ganado) {
 
-
-                                    imprimir.imprimirLento("\nAdivina la palabra para continuar. Pista: La casa que viene de la antigua Valyria " + String.valueOf(progreso), 10);
+                imprimir.imprimirLento("\nAdivina la palabra para continuar. Pista: La casa que viene de la antigua Valyria: " + String.valueOf(progreso), 10);
                 System.out.println("Vidas restantes: " + vidas);
                 System.out.print("Ingresa una letra: ");
                 char letra = Character.toUpperCase(sc.next().charAt(0));
