@@ -55,13 +55,43 @@ public class Juego_de_Tronos {
                 imprimir.imprimirLento("\n\nEstás de camino a Roca Dragón, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(a);
 
+                    if (!resultadoDelAhorcado){
+
+                        juego.perderTexto();
+                        break;
+
+                    }
+
+
+                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
                 case 2:
                 imprimir.imprimirLento("\n\nEstás de camino al Nido de Águilas, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(b);
 
+                    if (!resultadoDelAhorcado){
+
+                        juego.perderTexto();
+                        break;
+
+                    }
+
+
+                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
                 case 3:
                 imprimir.imprimirLento("\n\nEstás de camino a Invernalia, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(c);
+
+                    if (!resultadoDelAhorcado){
+
+                        juego.perderTexto();
+                        break;
+
+                    }
+
+
+                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
 
             }
 
