@@ -156,6 +156,11 @@ public class juegoAhorcado {
 
     }
 
+    public void perderTexto(){
 
+        System.out.println("HAS FALLADO EL AHORCADO");
+        System.out.println("VUELVE A INTENTARLO");
+
+    }
 
 }
