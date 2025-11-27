@@ -169,6 +169,8 @@ public class Juego_de_Tronos {
                         imprimir.imprimirLento(GREEN + "Tu ejército se ha revelado contra ti en su pueblo y has caído en manos de su rey, prueba otros caminos si quieres llegar al trono" + RESET, 10);
                         System.out.println(Arrays.toString(inventario.inventarioDanny(b)));
 
+                        break;
+
                     case 3:
 
                         inventario.inventarioDanny(c);
