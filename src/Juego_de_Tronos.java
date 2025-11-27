@@ -13,12 +13,14 @@ public class Juego_de_Tronos {
         Scanner sc = new Scanner(System.in);
         juegoAhorcado juego = new juegoAhorcado();
         imprimirDespacio imprimir = new imprimirDespacio();
+        RefactorizarTexto ref = new RefactorizarTexto();
         boolean resultadoDelAhorcado;
 
         int opciones;
         int a = 1;
         int b = 2;
         int c = 3;
+        int[] inventario = new int[3];
 
 
         imprimir.imprimirLento("\nComienza la aventura y tienes que hacerte con el trono de hierro, consigue el personaje que más te guste e intenta hacerte con el trono de hierro superando todos los peligros que aparecen por el camino.\n", 10);
@@ -37,9 +39,9 @@ public class Juego_de_Tronos {
 
             imprimir.imprimirLento("\n\n\nHas elegido a Jon Nieve, te encuantras en El Muro y posees:\n", 10);
 
-            System.out.println(RED + "ESPADA DE JON NIEVE" + RESET);
+            System.out.println(RED + "ESPADA DE JON NIEVE (ESPADA)" + RESET);
             System.out.println(BLUE + "LOBO BLANCO (FANTASMA)" + RESET);
-            System.out.println(GREEN + "EJÉRCITO DEL NORTE" + RESET);
+            System.out.println(GREEN + "EJÉRCITO DEL NORTE (EJÉRCITO)" + RESET);
 
             imprimir.imprimirLento("\n\nAvanza con tus refuerzos, pero antes debes escoger por donde quieres ir.\n ", 10);
 
@@ -60,8 +62,9 @@ public class Juego_de_Tronos {
 
                     }
 
-
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
+                    break;
 
                 case 2:
                 imprimir.imprimirLento("\n\nEstás de camino al Nido de Águilas, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
@@ -77,6 +80,8 @@ public class Juego_de_Tronos {
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
 
+                    break;
+
                 case 3:
                 imprimir.imprimirLento("\n\nEstás de camino a Invernalia, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(c);
@@ -90,6 +95,14 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+
+                    break;
+
+                default:
+
+                    ref.opcionIncorrecta();
+
+                    break;
 
             }
 
@@ -126,8 +139,10 @@ public class Juego_de_Tronos {
 
                 }
 
+                imprimir.imprimirLento("Has conseguido superar a los caballeros sigilosamente y sigues tu camino hacia la Bahía de los esclavos", 10);
+                imprimir.imprimirLento("\n\n\nHAS LLEGADO A LA BAHÍA DE LOS ESCLAVOS", 10);
+                imprimir.imprimirLento("Conquista la Bahía de los esclavos, A POR TODAS", 10);
 
-                imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
 
 
                 break;
@@ -164,8 +179,16 @@ public class Juego_de_Tronos {
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
 
 
-                break;
+
+                    break;
+
+                default:
+
+                    ref.opcionIncorrecta();
+                    break;
             }
+
+
 
 
         }
@@ -241,9 +264,16 @@ public class Juego_de_Tronos {
 
 
                 break;
+
+                default:
+
+                    ref.opcionIncorrecta();
+                    break;
             }
 
         }
+
+        System.out.println("PRUEBA OTRA VEZ");
 
     }
 
