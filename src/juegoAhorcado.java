@@ -8,7 +8,7 @@ public class juegoAhorcado {
 
         int vidas = 6;
         boolean ganado = false;
-        boolean acierto = false;
+        boolean acierto;
 
         if (a==1){
 
@@ -19,6 +19,8 @@ public class juegoAhorcado {
 
 
             while (vidas > 0 && !ganado) {
+
+                acierto = false;
 
 
                 imprimir.imprimirLento("\nAdivina la palabra para continuar. Pista: Donde se encuentra el trono de hierro " + String.valueOf(progreso), 10);
@@ -61,6 +63,8 @@ public class juegoAhorcado {
 
         else if (a==2) {
 
+
+
             String palabraSecreta = "SALVAJES";
             char[] progreso = new char[palabraSecreta.length()];
             for (int i = 0; i < progreso.length; i++) progreso[i] = '_';
@@ -69,6 +73,7 @@ public class juegoAhorcado {
 
             while (vidas > 0 && !ganado) {
 
+                acierto = false;
 
                 imprimir.imprimirLento("\nAdivina la palabra para continuar. Pista: Como llaman a los del norte del muro: " + String.valueOf(progreso), 10);
                 System.out.println("Vidas restantes: " + vidas);
@@ -114,6 +119,8 @@ public class juegoAhorcado {
 
 
             while (vidas > 0 && !ganado) {
+
+                acierto = false;
 
                 imprimir.imprimirLento("\nAdivina la palabra para continuar. Pista: La casa que viene de la antigua Valyria: " + String.valueOf(progreso), 10);
                 System.out.println("Vidas restantes: " + vidas);
