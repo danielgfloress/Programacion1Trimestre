@@ -49,7 +49,7 @@ public class Juego_de_Tronos {
             opciones1 = sc.nextInt();
 
             switch (opciones1) {
-                case 1:
+            case 1:
                 imprimir.imprimirLento("\n\nEstás de camino a Roca Dragón, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(a);
 
@@ -61,9 +61,10 @@ public class Juego_de_Tronos {
                     }
 
 
-                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                break;
 
-                case 2:
+            case 2:
                 imprimir.imprimirLento("\n\nEstás de camino al Nido de Águilas, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(b);
 
@@ -75,9 +76,9 @@ public class Juego_de_Tronos {
                     }
 
 
-                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
-
-                case 3:
+                imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                break;
+            case 3:
                 imprimir.imprimirLento("\n\nEstás de camino a Invernalia, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(c);
 
@@ -88,10 +89,11 @@ public class Juego_de_Tronos {
 
                     }
 
-
-                    imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
-
+                imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                break;
             }
+
+            imprimir.imprimirLento("HAS LLEGADO A INVERNALIA", 10);
 
         }
 
