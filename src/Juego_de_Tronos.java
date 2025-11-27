@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -13,9 +14,12 @@ public class Juego_de_Tronos {
         Scanner sc = new Scanner(System.in);
         juegoAhorcado juego = new juegoAhorcado();
         imprimirDespacio imprimir = new imprimirDespacio();
+        RefactorizarTexto ref = new RefactorizarTexto();
+        Inventarios inventario = new Inventarios();
         boolean resultadoDelAhorcado;
 
         int opciones;
+        int objetos;
         int a = 1;
         int b = 2;
         int c = 3;
@@ -37,9 +41,9 @@ public class Juego_de_Tronos {
 
             imprimir.imprimirLento("\n\n\nHas elegido a Jon Nieve, te encuantras en El Muro y posees:\n", 10);
 
-            System.out.println(RED + "ESPADA DE JON NIEVE" + RESET);
+            System.out.println(RED + "ESPADA DE JON NIEVE (ESPADA)" + RESET);
             System.out.println(BLUE + "LOBO BLANCO (FANTASMA)" + RESET);
-            System.out.println(GREEN + "EJÉRCITO DEL NORTE" + RESET);
+            System.out.println(GREEN + "EJÉRCITO DEL NORTE (EJÉRCITO)" + RESET);
 
             imprimir.imprimirLento("\n\nAvanza con tus refuerzos, pero antes debes escoger por donde quieres ir.\n ", 10);
 
@@ -101,8 +105,13 @@ public class Juego_de_Tronos {
 
                 break;
 
-            default:
-                break;
+
+                default:
+
+                    ref.opcionIncorrecta();
+
+                    break;
+
             }
 
 
@@ -139,8 +148,29 @@ public class Juego_de_Tronos {
 
                 }
 
+                imprimir.imprimirLento("Has conseguido superar a los caballeros sigilosamente y sigues tu camino hacia la Bahía de los esclavos", 10);
+                imprimir.imprimirLento("\n\n\nHAS LLEGADO A LA BAHÍA DE LOS ESCLAVOS", 10);
+                imprimir.imprimirLento("Conquista la Bahía de los esclavos, A POR TODAS", 10);
+                imprimir.imprimirLento("Usa algo del inventario para atacar", 10);
 
-                imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                System.out.println(Arrays.toString(inventario.inventarioDanny(0)));
+
+                objetos = sc.nextInt();
+
+                switch (objetos){
+
+                    case 1:
+
+                        inventario.inventarioDanny(1);
+
+                        imprimir.imprimirLento("Has escogido usar tus gragones", 10);
+                        imprimir.imprimirLento("La batalla ha comenzado y llegas con tus dragones. El pueblo de la Bahía de los esclavos se queda aterrorizado y comienzas a quemar todo lo que te encuentras en tu camino derrotando a su ejército y haciéndote con la Bahía de los esclavos. Sin embargo, derrotan a tus dragones y avanzas sin ellos.", 10);
+
+
+                }
+
+
+
 
 
                 break;
@@ -177,8 +207,16 @@ public class Juego_de_Tronos {
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
 
 
-                break;
+
+                    break;
+
+                default:
+
+                    ref.opcionIncorrecta();
+                    break;
             }
+
+
 
 
         }
@@ -254,9 +292,16 @@ public class Juego_de_Tronos {
 
 
                 break;
+
+                default:
+
+                    ref.opcionIncorrecta();
+                    break;
             }
 
         }
+
+        System.out.println("PRUEBA OTRA VEZ");
 
     }
 
