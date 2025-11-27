@@ -50,23 +50,16 @@ public class Juego_de_Tronos {
             System.out.println(BLUE + "3. Invernalia" + RESET);
             opciones1 = sc.nextInt();
 
-            if (opciones1 == 1) {
-
+            switch (opciones1) {
+                case 1:
                 imprimir.imprimirLento("\n\nEstás de camino a Roca Dragón, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(a);
 
-
-
-            }
-
-            else if (opciones1 == 2) {
-
+                case 2:
                 imprimir.imprimirLento("\n\nEstás de camino al Nido de Águilas, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(b);
 
-
-            } else if (opciones1==3) {
-
+                case 3:
                 imprimir.imprimirLento("\n\nEstás de camino a Invernalia, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(c);
 
