@@ -62,6 +62,9 @@ public class Juego_de_Tronos {
 
 
                 imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                imprimir.imprimirLento("\nHAS LLEGADO A ROCA DRAGON", 10);
+                imprimir.imprimirLento("\nConquista Roca Dragón!", 10);
+
                 break;
 
             case 2:
@@ -77,6 +80,9 @@ public class Juego_de_Tronos {
 
 
                 imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                imprimir.imprimirLento("\n HAS LLEGADO AL NIDO DE AGUILAS", 10);
+                imprimir.imprimirLento("\nConquista el Nido de Aguilas!", 10);
+
                 break;
             case 3:
                 imprimir.imprimirLento("\n\nEstás de camino a Invernalia, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
@@ -90,10 +96,15 @@ public class Juego_de_Tronos {
                     }
 
                 imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                imprimir.imprimirLento("HAS LLEGADO A INVERNALIA", 10);
+                imprimir.imprimirLento("\nConquista Invernalia!", 10);
+
+                break;
+
+            default:
                 break;
             }
 
-            imprimir.imprimirLento("HAS LLEGADO A INVERNALIA", 10);
 
         }
 
