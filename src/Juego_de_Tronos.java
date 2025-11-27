@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -14,13 +15,14 @@ public class Juego_de_Tronos {
         juegoAhorcado juego = new juegoAhorcado();
         imprimirDespacio imprimir = new imprimirDespacio();
         RefactorizarTexto ref = new RefactorizarTexto();
+        Inventarios inventario = new Inventarios();
         boolean resultadoDelAhorcado;
 
         int opciones;
+        int objetos;
         int a = 1;
         int b = 2;
         int c = 3;
-        int[] inventario = new int[3];
 
 
         imprimir.imprimirLento("\nComienza la aventura y tienes que hacerte con el trono de hierro, consigue el personaje que más te guste e intenta hacerte con el trono de hierro superando todos los peligros que aparecen por el camino.\n", 10);
@@ -142,6 +144,25 @@ public class Juego_de_Tronos {
                 imprimir.imprimirLento("Has conseguido superar a los caballeros sigilosamente y sigues tu camino hacia la Bahía de los esclavos", 10);
                 imprimir.imprimirLento("\n\n\nHAS LLEGADO A LA BAHÍA DE LOS ESCLAVOS", 10);
                 imprimir.imprimirLento("Conquista la Bahía de los esclavos, A POR TODAS", 10);
+                imprimir.imprimirLento("Usa algo del inventario para atacar", 10);
+
+                System.out.println(Arrays.toString(inventario.inventarioDanny(0)));
+
+                objetos = sc.nextInt();
+
+                switch (objetos){
+
+                    case 1:
+
+                        inventario.inventarioDanny(1);
+
+                        imprimir.imprimirLento("Has escogido usar tus gragones", 10);
+                        imprimir.imprimirLento("La batalla ha comenzado y llegas con tus dragones. El pueblo de la Bahía de los esclavos se queda aterrorizado y comienzas a quemar todo lo que te encuentras en tu camino derrotando a su ejército y haciéndote con la Bahía de los esclavos. Sin embargo, derrotan a tus dragones y avanzas sin ellos.", 10);
+
+
+                }
+
+
 
 
 
