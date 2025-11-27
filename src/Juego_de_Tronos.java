@@ -21,8 +21,6 @@ public class Juego_de_Tronos {
         int c = 3;
 
 
-
-
         imprimir.imprimirLento("\nComienza la aventura y tienes que hacerte con el trono de hierro, consigue el personaje que más te guste e intenta hacerte con el trono de hierro superando todos los peligros que aparecen por el camino.\n", 10);
 
         System.out.println(YELLOW + "Elige un personaje: " + RESET);
@@ -246,9 +244,6 @@ public class Juego_de_Tronos {
             }
 
         }
-
-
-
 
     }
 
