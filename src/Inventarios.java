@@ -1,6 +1,6 @@
 public class Inventarios {
 
-    public final int vacio= 0;
+    public final String vacio= "vacio";
 
     public final String jon_espada = "Espada";
     public final String jon_fantasma = "Lobo2";
@@ -10,10 +10,10 @@ public class Inventarios {
     public final String danny_ejercitos = "Ejército";
     public final String jorah = "Jorah";
 
-    public int[] inventarioDanny (int objeto){
+    public String[] inventarioDanny (int objeto){
 
 
-        int[] inventario = new int[3];
+        String[] inventario = new String[3];
 
         inventario[0] = dragones;
         inventario[1] = danny_ejercitos;
