@@ -13,14 +13,11 @@ public class MapaCastillo {
                 {false, true, false, false}
         };
 
-
         int fila = 1;
         int col = 0;
         int filaHabitacion = 0;
         int colHabitacion = 3;
         int contador = 3;
-
-        System.out.println("\nComienzas en la posición: (" + fila + "," + col + ")");
 
         System.out.println("\nMapa castillo:");
         for (int i = 0; i < mapa.length; i++) {
@@ -33,7 +30,7 @@ public class MapaCastillo {
 
                 } else if (i == filaHabitacion && j == colHabitacion) {
 
-                    System.out.println("Habitación rey");
+                    System.out.println("Rey");
                 } else {
                     System.out.print(" . ");
                 }

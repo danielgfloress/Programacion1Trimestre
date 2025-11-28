@@ -33,9 +33,8 @@ public class Inventarios {
 
         if (objeto == 2){
 
-            inventario[0] = (RED + "HAS" + RESET);
-            inventario[1] = (RED + "PERDIDO" + RESET);
-            inventario[2] = (RED + "REY" + RESET);
+            inventario[1] = vacio;
+
         }
 
         if (objeto == 3){

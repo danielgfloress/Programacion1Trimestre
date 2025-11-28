@@ -159,6 +159,9 @@ public class Juego_de_Tronos {
 
                         imprimir.imprimirLento(RED + "\nHAS ELEGIDO USAR A TUS DRAGONES\n" + RESET, 10);
                         imprimir.imprimirLento(RED + "La batalla ha comenzado y llegas con tus dragones. El pueblo de la Bahía de los esclavos se queda aterrorizado y comienzas a quemar todo lo que te encuentras en tu camino derrotando a su ejército y haciéndote con la Bahía de los esclavos. Sin embargo, derrotan a tus dragones y avanzas sin ellos." + RESET, 10);
+                        imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
+
+
 
 
                     case 2:
@@ -167,7 +170,7 @@ public class Juego_de_Tronos {
 
                         imprimir.imprimirLento(GREEN + "\nHAS ELEGIDO USAR TU EJÉRCITO" + RESET, 10);
                         imprimir.imprimirLento(GREEN + "Tu ejército se ha revelado contra ti en su pueblo y has caído en manos de su rey, prueba otros caminos si quieres llegar al trono" + RESET, 10);
-                        System.out.println(Arrays.toString(inventario.inventarioDanny(b)));
+                        System.out.println("HAS PERDIDO. INTÉNTALO DE NUEVO");
 
                         break;
 
@@ -176,7 +179,7 @@ public class Juego_de_Tronos {
                         inventario.inventarioDanny(c);
 
                         imprimir.imprimirLento(BLUE + "HAS ELEGIDO USAR A JORAH PARA INFILTRARSE EN SU CASTILLO" + RESET, 10);
-                        imprimir.imprimirLento(BLUE + "Jorah se ha conseguido infiltrar en su castillo pero para acceder al lugar donde se encuentra el rey debe pensar rapido y elegir. Si las puertas que eliges están cerradas y hacen ruido si intentas abrirlas, a las 3 puertas que intentes abrir y estém cerradas te capturarán. TEN CUIDADO" + RESET, 10);
+                        imprimir.imprimirLento(BLUE + "Jorah se ha conseguido infiltrar en su castillo pero para acceder al lugar donde se encuentra el rey debe pensar rapido y elegir. Si las puertas que eliges están cerradas, hacen ruido si intentas abrirlas, a las 3 puertas que intentes abrir y estém cerradas te capturarán. TEN CUIDADO" + RESET, 10);
 
                         if(!mapa.ejecutarMapa()){
 
@@ -186,18 +189,15 @@ public class Juego_de_Tronos {
 
                         imprimir.imprimirLento(BLUE + "\nTE HAS COLADO EN LA HABITACIÓN DEL REY Y HAS CONSEGUIDO CONQUISTAR LA CIUDAD GRACIAS A JORAH ", 10);
 
+                        imprimir.imprimirLento(BLUE + "\n\nENHORABUENA, HAS CONSEGUIDO HACERTE CON LA BAHÍA DE LOS ESCLAVOS Y TU EJÉRCITO HA INCREMENTADO SU FUERZA Y SE HA HECHO MÁS GRANDE" + RESET, 10);
+                        imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
 
-
-
+                    default:
+                        System.out.println("Ese objeto no está en tu inventario");
+                        System.out.println("La próxima vez elige una opción correcta");
                         break;
-
                 }
 
-
-
-
-
-                break;
                 case 2:
 
                 imprimir.imprimirLento("\n\nEstás de camino a la Yunkai, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
@@ -212,9 +212,35 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                    imprimir.imprimirLento("\n\n\nHAS LLEGADO YUNKAI\n", 10);
+                    imprimir.imprimirLento("Conquista YUNKAI, A POR TODAS", 10);
+                    imprimir.imprimirLento("Usa algo del inventario para atacar\n", 10);
+
+                    System.out.println(Arrays.toString(inventario.inventarioDanny(0)));
+                    objetos = sc.nextInt();
+
+                    switch (objetos){
+                        case 1:
+                            inventario.inventarioDanny(a);
+
+                            imprimir.imprimirLento(RED + "HAS ELEGIDO USAR TUS 3 DRAGONES EN UNA CIUDAD DE ARENA DONDE TUS DRAGONES NADA MÁS ENTRAR SE HAN QUEDADO CIEGOS Y SE HAN CAÍDO CONTIGO MONTADA EN UNO DE ELLOS"+ RESET,10);
+                            imprimir.imprimirLento(RED + "HAS PERDIDO. VUELVE A INTENTARLO"+ RESET,10);
+
+                            break;
+
+                        case 2:
+
+                            inventario.inventarioDanny(b);
+
+
+                            break;
+
+                        case 3:
 
 
                 break;
+                    }
+
                 case 3:
 
                 imprimir.imprimirLento("\n\nEstás de camino a la Astapor, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
