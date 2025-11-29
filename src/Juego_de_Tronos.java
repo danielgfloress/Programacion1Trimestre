@@ -17,6 +17,7 @@ public class Juego_de_Tronos {
         RefactorizarTexto ref = new RefactorizarTexto();
         Inventarios inventario = new Inventarios();
         MapaCastillo mapa = new MapaCastillo();
+        Dragon dragones = new Dragon();
         boolean resultadoDelAhorcado;
 
         int opciones;
@@ -24,6 +25,7 @@ public class Juego_de_Tronos {
         int a = 1;
         int b = 2;
         int c = 3;
+        int dragon;
 
 
         imprimir.imprimirLento("\nComienza la aventura y tienes que hacerte con el trono de hierro, consigue el personaje que más te guste e intenta hacerte con el trono de hierro superando todos los peligros que aparecen por el camino.\n", 10);
@@ -212,7 +214,7 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
-                    imprimir.imprimirLento("\n\n\nHAS LLEGADO YUNKAI\n", 10);
+                    imprimir.imprimirLento("\n\n\nHAS LLEGADO A YUNKAI\n", 10);
                     imprimir.imprimirLento("Conquista YUNKAI, A POR TODAS", 10);
                     imprimir.imprimirLento("Usa algo del inventario para atacar\n", 10);
 
@@ -232,10 +234,30 @@ public class Juego_de_Tronos {
 
                             inventario.inventarioDanny(b);
 
+                            imprimir.imprimirLento(GREEN + "HAS ELEGIDO USAR TU EJÉRCITO DE ESCLAVOS Y HA COMENZADO LA GUERRA EN YUNKAI\n\n" + RESET, 10);
+                            imprimir.imprimirLento(GREEN + "TRAS TRES DÍAS DE BATALLA TU EJÉRCITO HA SIDO CAPAZ DE VENCER AL PUEBLO DE YUNKAI" + RESET, 10);
+                            imprimir.imprimirLento(GREEN + "SIN EMBARGO...\n HAS PERDIDO TU EJÉRCITO Y TODAVÍA TE QUEDA HACERTE CON EL TRONO DE HIERRO, TEN CUIDADO CON TUS PRÓXIMAS ELECCIONES "+RESET, 10);
+                            imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
+
 
                             break;
 
                         case 3:
+
+                            inventario.inventarioDanny(c);
+
+                            imprimir.imprimirLento(BLUE + "HAS ELEGIDO MANDAR A JORAH A EXPLORAR YUNKAI Y SE HA INFILTRADO EN SU CASTILLO, PERO LA PUERTA DEL REY ES UNA PUERTA MÁGICA QUE SE ABRE CON UN ACERTIJO",10);
+                            resultadoDelAhorcado = juego.jugarAhorcado(4);
+
+                            if (!resultadoDelAhorcado){
+
+                                juego.perderTexto();
+                                break;
+
+                            }
+
+                            imprimir.imprimirLento(BLUE + "HAS ACERTADO EL ACERTIJO Y JORAH TIENE UNA PELEA CARA A CARA CON EL REY CUANDO DE REPENTE...\nE DESHACE DE ÉL EN UN ABRIR Y CERRAR DE OJOARREBATANDOLE LA CORONA Y ENTREGANDOTELA JUSTO ANTES DE MORIR...\nEN SU PELEA CON EL REY HABÍA SUFRIDO GRAVES HERIDAS Y HA FALLECIDO, PERO AHORA NO HAY TIEMPO DE PENSAR EN ESO" + RESET, 10);
+                            imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
 
 
                 break;
@@ -255,8 +277,53 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                    imprimir.imprimirLento("\n\n\nHAS LLEGADO A ASTAPOR\n", 10);
+                    imprimir.imprimirLento("Conquista ASTAPOR, A POR TODAS", 10);
+                    imprimir.imprimirLento("Usa algo del inventario para atacar\n", 10);
+
+                    System.out.println(Arrays.toString(inventario.inventarioDanny(0)));
+                    objetos = sc.nextInt();
+
+                    switch (objetos) {
+
+                        case 1:
+                            inventario.inventarioDanny(a);
+
+                            imprimir.imprimirLento(RED + "\nHAS ELEGIDO USAR TUS 3 DRAGONES, PERO TE DAS CUENTA DE QUE SI QUEMAS LA CIUDAD QUEMARÁS TAMBIÉN A OTRA GENTE QUE PUEDES INCORPORAR A TU EJÉRCITO, ELIGE QUE QUIERES HACER",10);
+                            System.out.println(YELLOW + "1. QUEMAR LA CIUDAD" + RESET);
+                            System.out.println(GREEN + "2. INTENTAR LLEGAR CON EL DRAGÓN AL CENTRO DE LA CIUDAD Y HACERTE CON LA CORONA");
+                            dragon = sc.nextInt();
+
+                            if(dragon == 1){
+
+                                dragones.dragonOpcion(dragon);
+
+                                break;
+
+                            }else if(dragon == 2){
+
+                                dragones.dragonOpcion(dragon);
+
+                            }else{
+
+                                dragones.dragonOpcion(dragon);
+
+                                break;
+                            }
+
+                            break;
+
+                        case 2:
 
 
+                            break;
+
+                        case 3:
+
+
+                            break;
+
+                    }
 
                     break;
 
@@ -349,7 +416,17 @@ public class Juego_de_Tronos {
                     break;
             }
 
+
+
+        }else{
+
+            imprimir.imprimirLento(BLUE + "ESO NO ES UN PERSONAJE" + RESET, 10);
+
         }
+
+
+
+        imprimir.imprimirLento(RED + "\n\n=========FIN DEL JUEGO=========" +RESET,100);
 
 
     }

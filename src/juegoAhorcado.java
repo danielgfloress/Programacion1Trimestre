@@ -156,6 +156,53 @@ public class juegoAhorcado {
                 imprimir.imprimirLento("\nPerdiste. La palabra era: " + palabraSecreta, 10);
             }
 
+        } else if (a==4) {
+            vidas = vidas + 2;
+            String palabraSecreta = "HONOR";
+            char[] progreso = new char[palabraSecreta.length()];
+            for (int i = 0; i < progreso.length; i++) progreso[i] = '_';
+
+
+
+            while (vidas > 0 && !ganado) {
+
+                acierto = false;
+
+                imprimir.imprimirLento("\nNo es arma ni hierro, pero mueve al valiente;\n" +
+                        "guía al caballero, firme y consistente." + String.valueOf(progreso), 10);
+                System.out.println("Vidas restantes: " + vidas);
+                System.out.print("Ingresa una letra: ");
+                char letra = Character.toUpperCase(sc.next().charAt(0));
+
+
+
+                for (int i = 0; i < palabraSecreta.length(); i++) {
+                    if (palabraSecreta.charAt(i) == letra) {
+                        progreso[i] = letra;
+                        acierto = true;
+                    }
+                }
+
+                if (!acierto) {
+                    vidas--;
+                    System.out.println("Letra incorrecta");
+                } else {
+                    System.out.println("Letra correcta");
+                }
+
+
+                if (String.valueOf(progreso).equals(palabraSecreta)) {
+                    ganado = true;
+                }
+            }
+
+
+            if (ganado) {
+                imprimir.imprimirLento("\n¡Ganaste! La palabra era: " + palabraSecreta, 10);
+            } else {
+                imprimir.imprimirLento("\nPerdiste. La palabra era: " + palabraSecreta, 10);
+            }
+
         }
 
         return ganado;
