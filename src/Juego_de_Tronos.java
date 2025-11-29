@@ -260,12 +260,14 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
 
 
-                break;
+                            break;
                     }
+
+                    break;
 
                 case 3:
 
-                imprimir.imprimirLento("\n\nEstás de camino a la Astapor, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
+                imprimir.imprimirLento("\n\nEstás de camino a Astapor, pero te encuentras con unos caballeros que no te dejan pasar. Para pasar debes acertar el ahorcado.", 10);
                 resultadoDelAhorcado = juego.jugarAhorcado(c);
 
                     if (!resultadoDelAhorcado){

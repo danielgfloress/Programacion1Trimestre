@@ -157,7 +157,7 @@ public class juegoAhorcado {
             }
 
         } else if (a==4) {
-            vidas = vidas + 2;
+            vidas = vidas - 2;
             String palabraSecreta = "HONOR";
             char[] progreso = new char[palabraSecreta.length()];
             for (int i = 0; i < progreso.length; i++) progreso[i] = '_';
@@ -168,8 +168,8 @@ public class juegoAhorcado {
 
                 acierto = false;
 
-                imprimir.imprimirLento("\nNo es arma ni hierro, pero mueve al valiente;\n" +
-                        "guía al caballero, firme y consistente." + String.valueOf(progreso), 10);
+                imprimir.imprimirLento("\nNo es arma ni hierro, pero mueve al valiente\n" +
+                        "guía al caballero, firme y consistente: " + String.valueOf(progreso), 10);
                 System.out.println("Vidas restantes: " + vidas);
                 System.out.print("Ingresa una letra: ");
                 char letra = Character.toUpperCase(sc.next().charAt(0));
