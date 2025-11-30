@@ -16,6 +16,10 @@ public class Inventarios {
     public final String danny_ejercitos =(GREEN + "2. Ejército" + RESET);
     public final String jorah = (BLUE + "3. Jorah" + RESET);
 
+    public final String lanza = (RED + "1. LANZA CONGELADA"+ RESET);
+    public final String resureccion =(GREEN + "2. PODER DE RESURRECCIÓN" + RESET);
+    public final String dragon_revivido = (BLUE + "3. DRAGÓN REVIVIDO" + RESET);
+
     public String[] inventarioDanny (int objeto){
 
 
@@ -24,6 +28,36 @@ public class Inventarios {
         inventario[0] = dragones;
         inventario[1] = danny_ejercitos;
         inventario[2] = jorah;
+
+        if (objeto == 1){
+
+            inventario[0] = vacio;
+
+        }
+
+        if (objeto == 2){
+
+            inventario[1] = vacio;
+
+        }
+
+        if (objeto == 3){
+
+            inventario[2] = vacio;
+
+        }
+
+
+        return inventario;
+    }
+
+    public  String[] inventarioReyNoche (int objeto){
+
+        String[] inventario = new String[3];
+
+        inventario[0] = lanza;
+        inventario[1] = resureccion;
+        inventario[2] = dragon_revivido;
 
         if (objeto == 1){
 
