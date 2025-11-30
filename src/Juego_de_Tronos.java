@@ -382,6 +382,25 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                    imprimir.imprimirLento("\n\n\nHAS LLEGADO A El Muro\n", 10);
+                    imprimir.imprimirLento("Conquista El Muro, vamos tu puedes!", 10);
+                    imprimir.imprimirLento("Usa algo del inventario para atacar\n", 10);
+
+                    System.out.println(Arrays.toString(inventario.inventarioReyNoche(0)));
+                    objetos = sc.nextInt();
+
+                    switch (objetos){
+                        case 1:
+
+                        case 2:
+
+                        case 3:
+
+                        default:
+
+                            ref.opcionIncorrecta();
+                            break;
+                    }
 
 
                 break;
