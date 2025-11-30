@@ -2,9 +2,7 @@ public class Dragon {
 
     final String RESET = "\u001B[0m";
     final String RED = "\u001B[31m";
-    final String GREEN = "\u001B[32m";
     final String YELLOW = "\u001B[33m";
-    final String BLUE = "\u001B[34m";
     imprimirDespacio imprimir = new imprimirDespacio();
 
     public void dragonOpcion(int a){
@@ -16,7 +14,8 @@ public class Dragon {
 
         } else if (a==2) {
 
-
+            System.out.println("\nENHORABUENA, TE HAS CONSEGUIDO HACER CON EL REINO DE ASTAPOR");
+            imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
 
         }else{
 

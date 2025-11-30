@@ -44,9 +44,9 @@ public class Juego_de_Tronos {
 
             imprimir.imprimirLento("\n\n\nHas elegido a Jon Nieve, te encuantras en El Muro y posees:\n", 10);
 
-            System.out.println(RED + "ESPADA DE JON NIEVE (ESPADA)" + RESET);
+            System.out.println(RED + "ESPADA DE JON NIEVE" + RESET);
             System.out.println(BLUE + "LOBO BLANCO (FANTASMA)" + RESET);
-            System.out.println(GREEN + "EJÉRCITO DEL NORTE (EJÉRCITO)" + RESET);
+            System.out.println(GREEN + "EJÉRCITO DEL NORTE" + RESET);
 
             imprimir.imprimirLento("\n\nAvanza con tus refuerzos, pero antes debes escoger por donde quieres ir.\n ", 10);
 
@@ -68,6 +68,8 @@ public class Juego_de_Tronos {
                     }
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                    imprimir.imprimirLento(GREEN + "Has llegado a Roca Dragón pero es una ciudad muy bien protegida y con un ejército muy poderoso y grande"+ RESET,10);
+                    System.out.println(GREEN + "Elige un objeto de Jon para enfrentarte a ellos" + RESET);
 
                     break;
 
@@ -317,10 +319,16 @@ public class Juego_de_Tronos {
 
                         case 2:
 
+                            imprimir.imprimirLento(GREEN + "\nTU EJÉRITO ERA MÁS PODEROSO Y HAS CONSEGUIDO HACERTE CON LA VICTORIA."+ RESET,10);
+                            imprimir.imprimirLento(GREEN + "SIN EMBARGO, EN DESEMBARCO SE ESTÁN HACIENDO MÁS FUERTES Y NO HAY TIEMPO QUE PERDER TIENES QUE AVANZAR DE INMEDIATO PARA DESEMBARCO SIN TU EJÉRCITO DEBIDO AL CANSANCIO EN EL CAMPO DE BATALLA."+ RESET,10);
+
 
                             break;
 
                         case 3:
+
+                            imprimir.imprimirLento(BLUE + "MALA ELECCIÓN. Han capturado a Jorah y le han torturado haste contarle todos tus planes de batalla. Les contó que atacarías cuando se hiciese de día y en cuanto se entró montó una ofensiva hacia ti que te pilla totalmente por sorpesa y te arrasa." + RESET,10);
+                            System.out.println(RED + "HAS PERDIDO" +RESET);
 
 
                             break;
