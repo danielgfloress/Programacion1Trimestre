@@ -46,4 +46,35 @@ public class Inventarios {
 
         return inventario;
     }
+
+    public String[] inventarioJon(int objetos){
+
+        String[] inventario = new String[3];
+
+        inventario[0] = jon_espada;
+        inventario[1] = jon_fantasma;
+        inventario[2] = jon_ejercito;
+
+        if (objetos == 1){
+
+            inventario[0] = vacio;
+
+        }
+
+        if (objetos == 2){
+
+            inventario[1] = vacio;
+
+        }
+
+        if (objetos == 3){
+
+            inventario[2] = vacio;
+
+        }
+
+
+        return inventario;
+
+    }
 }

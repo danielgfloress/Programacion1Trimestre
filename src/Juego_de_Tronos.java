@@ -68,8 +68,44 @@ public class Juego_de_Tronos {
                     }
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
-                    imprimir.imprimirLento(GREEN + "Has llegado a Roca Dragón pero es una ciudad muy bien protegida y con un ejército muy poderoso y grande"+ RESET,10);
+                    imprimir.imprimirLento(GREEN + "\n\nHas llegado a Roca Dragón pero es una ciudad muy bien protegida y con un ejército muy poderoso y grande"+ RESET,10);
                     System.out.println(GREEN + "Elige un objeto de Jon para enfrentarte a ellos" + RESET);
+
+                    System.out.println(Arrays.toString(inventario.inventarioJon(a)));
+                    objetos = sc.nextInt();
+
+                    switch (objetos) {
+
+                        case 1:
+
+                            inventario.inventarioJon(a);
+
+                            imprimir.imprimirLento(RED + "\nEstás en la batalla y el rey de Roca Dragón va corriendo hacia ti para pelear. Sacas tu espada y te dispones a traspasarle con tu espada cuando... \nAPARECE UN DRAGÓN y el rey se va corriendo ahora estás tu con el dragón pero tu espada es la más poderosa de los 7 reinos y acabas con el. Todo el pueblo de Roca Dragón te da las gracias y se arrodillan ante ti. Tu ejército crece y tu fama también." + RESET, 10);
+                            imprimir.imprimirLento(RED + "Ahora todos te tienen miedo, A POR EL TRONO"+RESET , 10);
+
+                            break;
+
+                        case 2:
+
+                            imprimir.imprimirLento(YELLOW + "Has usado a tu lobo (Fantasma), pero rápidamente le han pillado los guardias intentándo colarse y le han asesinado. Como consecuencia el resto de lobos de tus filas te ha atacado y te han devorado." + RESET,10);
+                            System.out.println(RED + "HAS PERDIDO" + RESET);
+
+                            break;
+
+                        case 3:
+
+                            imprimir.imprimirLento(YELLOW + "Tu ejército no es lo suficientemente fuerte para conquistar Roca Dragón"+ RESET,10);
+                            System.out.println(RED + "HAS PERDIDO" + RESET);
+
+                            break;
+
+                        default:
+
+                            ref.opcionIncorrecta();
+                            break;
+
+                    }
+
 
                     break;
 
@@ -86,6 +122,7 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                    imprimir.imprimirLento(""+ RESET,10);
 
                     break;
 
@@ -166,8 +203,7 @@ public class Juego_de_Tronos {
                         imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
 
 
-
-
+                        break;
                     case 2:
 
                         inventario.inventarioDanny(b);
@@ -263,6 +299,12 @@ public class Juego_de_Tronos {
 
 
                             break;
+
+                        default:
+
+                            ref.opcionIncorrecta();
+                            break;
+
                     }
 
                     break;
@@ -333,6 +375,11 @@ public class Juego_de_Tronos {
 
                             break;
 
+                        default:
+
+                            ref.opcionIncorrecta();
+                            break;
+
                     }
 
                     break;
@@ -361,7 +408,7 @@ public class Juego_de_Tronos {
             imprimir.imprimirLento("\n\nAvanza con tus refuerzos, pero antes debes escoger por donde quieres ir.\n ", 10);
 
             System.out.println(BLUE + "1. El Muro" + RESET);
-            System.out.println(YELLOW + "2. Pueblo de los salvajes " + RESET);
+            System.out.println(YELLOW + "2. Pueblo de los salvajes" + RESET);
             System.out.println(RED + "3. Casa Craster" + RESET);
             opciones3 = sc.nextInt();
 
