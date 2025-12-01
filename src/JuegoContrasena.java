@@ -71,7 +71,7 @@ public class JuegoContrasena {
             System.out.println("Se te han acabado los intentos");
             return false;
         } else {
-            System.out.println("\nHas acertado la contraseña, ya puedes pasar del El Muro");
+            System.out.println("\nHas acertado la contraseña, ya puedes pasar");
             return  true;
         }
 
