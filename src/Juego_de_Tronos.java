@@ -18,6 +18,7 @@ public class Juego_de_Tronos {
         Inventarios inventario = new Inventarios();
         MapaCastillo mapa = new MapaCastillo();
         Dragon dragones = new Dragon();
+        BatallaFinal batalla = new BatallaFinal();
         JuegoContrasena juegoContrasena = new JuegoContrasena();
         boolean resultadoDelAhorcado;
 
@@ -83,6 +84,8 @@ public class Juego_de_Tronos {
 
                             imprimir.imprimirLento(RED + "\nEstás en la batalla y el rey de Roca Dragón va corriendo hacia ti para pelear. Sacas tu espada y te dispones a traspasarle con tu espada cuando... \nAPARECE UN DRAGÓN y el rey se va corriendo ahora estás tu con el dragón pero tu espada es la más poderosa de los 7 reinos y acabas con el. Todo el pueblo de Roca Dragón te da las gracias y se arrodillan ante ti. Tu ejército crece y tu fama también." + RESET, 10);
                             imprimir.imprimirLento(RED + "Ahora todos te tienen miedo, A POR EL TRONO"+RESET , 10);
+
+                            imprimir.imprimirLento(GREEN + "\nHas "+RESET,10);
 
                             break;
 
