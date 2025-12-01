@@ -384,24 +384,50 @@ public class Juego_de_Tronos {
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
                     imprimir.imprimirLento("\n\n\nHAS LLEGADO A El Muro\n", 10);
                     imprimir.imprimirLento("Conquista El Muro, vamos tu puedes!", 10);
-                    imprimir.imprimirLento("Usa algo del inventario para atacar\n", 10);
+                    imprimir.imprimirLento("\nUsa algo del inventario para atacar\n", 10);
 
                     System.out.println(Arrays.toString(inventario.inventarioReyNoche(0)));
                     objetos = sc.nextInt();
 
                     switch (objetos){
                         case 1:
+                            int decision;
+                            imprimir.imprimirLento("\nHas elegido tu lanza",10);
+                            imprimir.imprimirLento("\nCoges tu lanza y la tiras contra el muro",10);
+                            imprimir.imprimirLento("Consigues derribar el muro y entrar", 10);
+                            imprimir.imprimirLento("Qué deseas hacer",10);
+                            imprimir.imprimirLento("\n1. Pasar directamente a por el rey", 10);
+                            imprimir.imprimirLento("2.Acabar con todo el pueblo", 10);
+                            decision = sc.nextInt();
 
+                            switch (decision){
+                                case 1:
+                                    imprimir.imprimirLento("Cuando entras te hacen una enboscada por la espalda y mueres",10);
+                                    System.out.println(RED + "HAS PERDIDO" +RESET);
+                                    break;
+
+                                case 2:
+                                    imprimir.imprimirLento("Has arrasado con todo el pueblo",10);
+                                    imprimir.imprimirLento("Vas a por el rey y le cortas la cabeza. Has conseguido el trono",10);
+                                    break;
+
+                            }
                         case 2:
+                            imprimir.imprimirLento("Has elegido usar el poder de resureccion\nPero en el muro queman a los muertos por lo tanto no ha servido para nada y tu ejercito es mas debil que el del muro",10);
+                            System.out.println(RED + "HAS PERDIDO" +RESET);
+                            break;
 
                         case 3:
+                            imprimir.imprimirLento("Has elegido usar tu Dragon",10);
+                            imprimir.imprimirLento("Con el derrites el muro y quemas a toda la gente que hay",10);
+                            imprimir.imprimirLento("Consigues llegar al rey y quitarle el trono\nAhora el trono es tuyo",10);
+                            break;
 
                         default:
 
                             ref.opcionIncorrecta();
                             break;
                     }
-
 
                 break;
                 case 2:
