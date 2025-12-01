@@ -609,7 +609,7 @@ public class Juego_de_Tronos {
                             }else if(dragon == 2){
 
                                 dragones.dragonOpcion(dragon);
-                                imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES QUEDARTE CON TODO EL EJERCITO" + RESET, 10);
+                                imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES QUEDARTE CON TODO EL EJERCITO\nA por el trono de hierro" + RESET, 10);
 
                             }else{
 
@@ -651,12 +651,17 @@ public class Juego_de_Tronos {
                         case 1:
                             imprimir.imprimirLento("\nHas elegido tu lanza",10);
                             imprimir.imprimirLento("Antes de entrar hay una puerta con una contraseña debes de descubrirla para poder entrar y acabar con todos", 10);
-
+                            boolean contra = juegoContrasena.contrasena();
+                            if (!contra){
+                                juego.perderTexto();
+                                break;
+                            }
+                            imprimir.imprimirLento("Has conseguido entrar a la Casa Craster y has reclutado a todos sus hijos varones\nTu ejercito ha aumentado\nA por el trono de hierro", 10);
 
                         case 2:
                             imprimir.imprimirLento("Has elegido usar el poder de resureccion",10);
                             imprimir.imprimirLento("Todos los hijos varones se han convertido en caminantes",10);
-                            imprimir.imprimirLento("Llegas a un acuerdo para quedarse a todos sus hijos",10);
+                            imprimir.imprimirLento("Llegas a un acuerdo para quedarse a todos sus hijos\nA por el trono de hierro",10);
 
                             break;
 
