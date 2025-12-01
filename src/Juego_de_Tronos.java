@@ -73,7 +73,7 @@ public class Juego_de_Tronos {
                     imprimir.imprimirLento(GREEN + "\n\nHas llegado a Roca Dragón pero es una ciudad muy bien protegida y con un ejército muy poderoso y grande"+ RESET,10);
                     System.out.println(GREEN + "Elige un objeto de Jon para enfrentarte a ellos" + RESET);
 
-                    System.out.println(Arrays.toString(inventario.inventarioJon(a)));
+                    System.out.println(Arrays.toString(inventario.inventarioJon(0)));
                     objetos = sc.nextInt();
 
                     switch (objetos) {
@@ -85,7 +85,47 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(RED + "\nEstás en la batalla y el rey de Roca Dragón va corriendo hacia ti para pelear. Sacas tu espada y te dispones a traspasarle con tu espada cuando... \nAPARECE UN DRAGÓN y el rey se va corriendo ahora estás tu con el dragón pero tu espada es la más poderosa de los 7 reinos y acabas con el. Todo el pueblo de Roca Dragón te da las gracias y se arrodillan ante ti. Tu ejército crece y tu fama también." + RESET, 10);
                             imprimir.imprimirLento(RED + "Ahora todos te tienen miedo, A POR EL TRONO"+RESET , 10);
 
-                            imprimir.imprimirLento(GREEN + "\nHas "+RESET,10);
+                            imprimir.imprimirLento(GREEN + "\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder a la final. "+RESET,10);
+                            System.out.println(Arrays.toString(inventario.inventarioJon(a)));
+                            opciones = sc.nextInt();
+
+                            switch (opciones) {
+
+                                case 1:
+
+                                    imprimir.imprimirLento(RED + "Ese hueco de tu inventario está vacío"+RESET,10);
+                                    break;
+
+                                case 2:
+
+                                    inventario.inventarioJon(b);
+
+                                    imprimir.imprimirLento(GREEN + "\nHas elegido usar a Fantasma\nSueltas a fantasma a las afueras de Desembarco e inspecciona la zona. Encuentra una palanca con la que se puede bajar la puerta y acceder.\nLos guardias le pillan...\n¡Pero echa a correr y salta hacia la palanca activándola y dejándo pasar a todas tus tropas\n" + RESET, 10);
+                                    imprimir.imprimirLento(RED + "Empieza la batalla con el Rey"+RESET,100);
+
+                                    boolean batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO JON NIEVE=====" + RESET,100);
+
+                                    break;
+
+                                case 3:
+
+
+
+                                    break;
+
+                                default:
+
+                                    ref.opcionIncorrecta();
+                                    break;
+
+                            }
 
                             break;
 
@@ -685,7 +725,7 @@ public class Juego_de_Tronos {
 
         }else{
 
-            imprimir.imprimirLento(BLUE + "ESO NO ES UN PERSONAJE" + RESET, 10);
+            ref.opcionIncorrecta();
 
         }
 

@@ -14,7 +14,7 @@ public class BatallaFinal {
     int vidaRey = 100;
     int vidaJugador = 100;
 
-    public void batalla() {
+    public boolean batalla() {
 
         imprimir.imprimirLento(YELLOW + "¡El Rey te espera sobre el Trono de Hierro!" + RESET, 30);
 
@@ -35,8 +35,10 @@ public class BatallaFinal {
 
         if (vidaJugador <= 0) {
             imprimir.imprimirLento(RED + "\nHas muerto... El Rey sigue en el poder." + RESET, 40);
+            return false;
         } else {
             imprimir.imprimirLento(GREEN + "\n¡Has vencido al Rey y el Trono es tuyo!" + RESET, 40);
+            return true;
         }
     }
 
