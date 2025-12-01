@@ -307,6 +307,7 @@ public class Juego_de_Tronos {
                             }else if(dragon == 2){
 
                                 dragones.dragonOpcion(dragon);
+                                imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
 
                             }else{
 
@@ -444,6 +445,56 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                    imprimir.imprimirLento("\n\n\nHAS LLEGADO AL PUEBLO DE LOS SALVAJES\n", 10);
+                    imprimir.imprimirLento("Conquista el Pueblo de los Salvajes, animo!", 10);
+                    imprimir.imprimirLento("\nUsa algo del inventario para atacar\n", 10);
+
+                    System.out.println(Arrays.toString(inventario.inventarioReyNoche(0)));
+                    objetos = sc.nextInt();
+
+                    switch (objetos){
+                        case 1:
+                            imprimir.imprimirLento("\nHas elegido tu lanza",10);
+                            imprimir.imprimirLento("\nLos salvajes llevan estudiandote mucho tiempo y han diseñado una defensa para tu lanza\nTe atrapan y te matan",10);
+                            System.out.println(RED + "HAS PERDIDO" +RESET);
+
+                            break;
+
+                        case 2:
+                            imprimir.imprimirLento("Has elegido usar el poder de resureccion",10);
+                            imprimir.imprimirLento("Has revivido a todos lo muertos de la zona y se han aliado a tu ejercito\nTras derrotar a todos tu ejercito ha aumentado",10);
+
+                            break;
+
+                        case 3:
+                            imprimir.imprimirLento("Has elegido usar tu Dragon, que quieres hacer con el",10);
+                            System.out.println(YELLOW + "1. QUEMAR LA CIUDAD" + RESET);
+                            System.out.println(GREEN + "2. INTENTAR LLEGAR CON EL DRAGÓN AL CENTRO DEL PUEBLO Y HACERTE CON TODO");
+                            dragon = sc.nextInt();
+
+                            if(dragon == 1){
+
+                                dragones.dragonOpcion(dragon);
+
+                                break;
+
+                            }else if(dragon == 2){
+
+                                dragones.dragonOpcion(dragon);
+                                imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES QUEDARTE CON TODO EL EJERCITO" + RESET, 10);
+
+                            }else{
+
+                                dragones.dragonOpcion(dragon);
+
+                                break;
+                            }
+                            break;
+
+                        default:
+                            ref.opcionIncorrecta();
+                            break;
+                    }
 
 
                 break;
@@ -461,6 +512,37 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                    imprimir.imprimirLento("\n\n\nHAS LLEGADO A LA CASA CRASTER\n", 10);
+                    imprimir.imprimirLento("Conquista la casa craster para hacerte con la corona, a por ellos!", 10);
+                    imprimir.imprimirLento("\nUsa algo del inventario para atacar\n", 10);
+
+                    System.out.println(Arrays.toString(inventario.inventarioReyNoche(0)));
+                    objetos = sc.nextInt();
+
+                    switch (objetos){
+                        case 1:
+                            imprimir.imprimirLento("\nHas elegido tu lanza",10);
+                            imprimir.imprimirLento("Antes de entrar hay una puerta con una contraseña debes de descubrirla para poder entrar y acabar con todos", 10);
+
+
+                        case 2:
+                            imprimir.imprimirLento("Has elegido usar el poder de resureccion",10);
+                            imprimir.imprimirLento("Todos los hijos varones se han convertido en caminantes",10);
+                            imprimir.imprimirLento("Llegas a un acuerdo para quedarse a todos sus hijos",10);
+
+                            break;
+
+                        case 3:
+                            imprimir.imprimirLento("Has elegido usar tu Dragon",10);
+                            imprimir.imprimirLento("Quemas todo y te quedas sin los herederos del rey\nHas un perdido un aliado y te matan por arrasar con todo",10);
+                            System.out.println(RED + "HAS PERDIDO" +RESET);
+
+                            break;
+
+                        default:
+                            ref.opcionIncorrecta();
+                            break;
+                    }
 
 
                 break;
