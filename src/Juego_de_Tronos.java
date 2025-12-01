@@ -18,6 +18,8 @@ public class Juego_de_Tronos {
         Inventarios inventario = new Inventarios();
         MapaCastillo mapa = new MapaCastillo();
         Dragon dragones = new Dragon();
+        BatallaFinal batalla = new BatallaFinal();
+        JuegoContrasena juegoContrasena = new JuegoContrasena();
         boolean resultadoDelAhorcado;
 
         int opciones;
@@ -83,6 +85,8 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(RED + "\nEstás en la batalla y el rey de Roca Dragón va corriendo hacia ti para pelear. Sacas tu espada y te dispones a traspasarle con tu espada cuando... \nAPARECE UN DRAGÓN y el rey se va corriendo ahora estás tu con el dragón pero tu espada es la más poderosa de los 7 reinos y acabas con el. Todo el pueblo de Roca Dragón te da las gracias y se arrodillan ante ti. Tu ejército crece y tu fama también." + RESET, 10);
                             imprimir.imprimirLento(RED + "Ahora todos te tienen miedo, A POR EL TRONO"+RESET , 10);
 
+                            imprimir.imprimirLento(GREEN + "\nHas "+RESET,10);
+
                             break;
 
                         case 2:
@@ -122,7 +126,52 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
-                    imprimir.imprimirLento(""+ RESET,10);
+                    imprimir.imprimirLento(BLUE + "\n\nHas llegado al Nido de Águilas, la que se encuentra en el trono es tu tía, sin embargo, no está dispuesta a dejarte pasar ni a darte tu ejército"+ RESET,10);
+                    System.out.println(GREEN + "Elige un objeto de Jon para enfrentarte a ellos" + RESET);
+
+                    System.out.println(Arrays.toString(inventario.inventarioJon(a)));
+                    objetos = sc.nextInt();
+
+
+                    switch (objetos) {
+
+                        case 1:
+                            inventario.inventarioJon(a);
+
+                            imprimir.imprimirLento(RED + "¡¿Has usado la espada contra tu tía?!, tu pueblo te destierra ya que un rey jamás buscariía esa opción contra sus familiares." + RESET, 10);
+                            System.out.println(RED + "HAS PERDIDO" +RESET);
+
+                            break;
+
+                        case 2:
+
+                            inventario.inventarioJon(b);
+                            imprimir.imprimirLento(YELLOW + "Has usado a Fantasma, ¡BUENA ELECCIÓN!, ha descubierto la Puerta de la Luna, es una puerta secreta y vas hacia ella." + RESET,10);
+                            imprimir.imprimirLento(YELLOW + "\n\nLlegas a la Puerta de la luna y...\n¡¡¡TIENE UNA CONTRASEÑA!!!" + RESET, 10);
+
+                            boolean contra = juegoContrasena.contrasena();
+
+                            if (!contra){
+
+                                juego.perderTexto();
+                                break;
+
+                            }
+
+                            imprimir.imprimirLento(YELLOW + "Has conseguido entrar en el Nido de Águilas y tras mucho dialogar con tu tí ha cedido a prestarte y ejército para conquistar Desembarco."+ RESET,10);
+                            System.out.println(GREEN + "A POR ELLOS REY"+ RESET);
+
+                            break;
+
+
+                        case 3:
+
+                            inventario.inventarioJon(c);
+
+                            imprimir.imprimirLento(GREEN + "Tras mucha negociación con tu tía no habéis llegado a ningún acuerdo y has decidido usar tu ejército, el ejército del Nido de Águilas es mucho inferior al tuyo y tras la guerra has conseguido vencer, pero no tienes tiempo de que tu ejército se recupere y partes con tu lobo a Desembarco." + RESET,10);
+
+                            break;
+                    }
 
                     break;
 
@@ -139,6 +188,38 @@ public class Juego_de_Tronos {
 
 
                     imprimir.imprimirLento("\nHas conseguido superar a los caballeros sigilosamente", 10);
+                    imprimir.imprimirLento(BLUE + "\n\nHas llegado a Invernalia, tu antigua casa donde está tu hermano gobernando."+ RESET,10);
+                    System.out.println(GREEN + "Elige un objeto de Jon para enfrentarte a ellos" + RESET);
+
+                    System.out.println(Arrays.toString(inventario.inventarioJon(a)));
+                    objetos = sc.nextInt();
+
+                    switch (objetos){
+
+                        case 1:
+
+                            imprimir.imprimirLento(RED + "Has usado tu espada contra tu hermano...\nPero la usas para alzarla y el pueblo de invernalia y su ejército se une a ti nombrándote Rey en el Norte.",10);
+                            imprimir.imprimirLento(BLUE + "A POR DESEMBARCO REY EN EL NORTE" + RESET,10);
+
+                            break;
+
+                        case 2:
+
+                            inventario.inventarioJon(b);
+
+                            imprimir.imprimirLento(YELLOW + "Has mandado a tu lobo a inspeccionar la zona, aunque los guardias le detectan y...\nHAN RECONOCIDO A FANTASMA y te invitan a entrar, reclamas su ejército y te nombran Rey en el Norte. Lo único malo es que Fantasma ha encontrado su hábitat y no te acompañará" + RESET,10);
+                            imprimir.imprimirLento(BLUE + "A POR DESEMBARCO REY EN EL NORTE" + RESET,10);
+
+                            break;
+
+                        case 3:
+                            imprimir.imprimirLento(GREEN + "Como vas a atacar a tu hermano en tu propia ciudad, te han decapitado por traición al norte"+ RESET , 10);
+                            System.out.println(RED + "HAS PERDIDO"+ RESET);
+
+                            break;
+
+                    }
+
 
                     break;
 
