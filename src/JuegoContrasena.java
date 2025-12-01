@@ -65,9 +65,9 @@ public class JuegoContrasena {
                 System.out.println("El sexto numero es menor que el "+adivinar.charAt(5));
             }
 
-        }while(!contrasena.equals(adivinar) && intentos != 30);
+        }while(!contrasena.equals(adivinar) && intentos != 10);
 
-        if (intentos == 30){
+        if (intentos == 10){
             System.out.println("Se te han acabado los intentos");
             return false;
         } else {
