@@ -1,3 +1,4 @@
+
 # 🎮 Proyecto: Minijuegos en Java 17
 
 Este proyecto es una colección de **minijuegos programados en Java 17** como práctica de programación orientada a objetos, manejo de entradas, ciclos, condiciones y estructuras básicas.
@@ -6,26 +7,33 @@ Todos los juegos funcionan por **consola** e interactúan con el usuario mediant
 
 ---
 
-## 🧩 Minijuegos incluidos
+## 🌟 Minijuegos incluidos
 
-| Juego | Descripción | Archivo |
-|------|-------------|---------|
-| Juego de Tronos | Juego de decisiones basado en la serie, donde debes elegir sabiamente para sobrevivir | `Juego_de_Tronos.java` |
-| (Próximamente más minijuegos…) | | |
+| Juego            | Descripción                                                                                                         | Archivo                  |
+|------------------|---------------------------------------------------------------------------------------------------------------------|--------------------------|
+| Juego de Tronos  | Juego de decisiones basado en la serie, donde debes elegir sabiamente para sobrevivir y coseguir el Trono de Hierro | `Juego_de_Tronos.java`  |
+| (Próximamente más minijuegos...) | -                                                                                                                   | - |
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 🛠 Tecnologías utilizadas
 
 - Java **17**
 - Ejecución en línea de comandos (CLI)
-- Intellij IDEA
+- IntelliJ IDEA
 
 ---
 
-## ▶️ Cómo ejecutar el proyecto
+## 👥 Integrantes del equipo
 
-1. Clonar o descargar el repositorio
-2. Abrir una terminal en la carpeta del proyecto
-3. Compilar el minijuego:
+- Daniel Aldegunde
+- Álvaro Baz
+- Daniel García
+- Carlos Muñoz
 
+---
+
+## 📚 Ciclo y centro
+
+**1º DAM (Desarrollo de Aplicaciones Multiplataforma) - Módulo de Programación**  
+**Instituto: Xtart**
