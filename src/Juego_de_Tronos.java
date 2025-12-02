@@ -39,7 +39,10 @@ public class Juego_de_Tronos {
         System.out.println(RED + "2. Daenerys Targaryen" + RESET);
         System.out.println(BLUE + "3. El rey de la Noche" +  RESET);
 
-        batalla.leerEntero();
+        while (!sc.hasNextInt()) {
+            sc.next();
+            System.out.print("Introduce un número del 1-3: ");
+        }
 
         opciones = sc.nextInt();
 
@@ -60,7 +63,10 @@ public class Juego_de_Tronos {
             System.out.println(YELLOW + "2. Nido de Águilas" + RESET);
             System.out.println(BLUE + "3. Invernalia" + RESET);
 
-            batalla.leerEntero();
+            while (!sc.hasNextInt()) {
+                sc.next();
+                System.out.print("Introduce un número del 1-3: ");
+            }
 
             opciones1 = sc.nextInt();
 
@@ -82,7 +88,10 @@ public class Juego_de_Tronos {
 
                     System.out.println(Arrays.toString(inventario.inventarioJon(0)));
 
-                    batalla.leerEntero();
+                    while (!sc.hasNextInt()) {
+                        sc.next();
+                        System.out.print("Introduce un número del 1-3: ");
+                    }
 
                     objetos = sc.nextInt();
 
@@ -98,7 +107,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioJon(a)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 
@@ -195,7 +207,10 @@ public class Juego_de_Tronos {
 
                     System.out.println(Arrays.toString(inventario.inventarioJon(a)));
 
-                    batalla.leerEntero();
+                    while (!sc.hasNextInt()) {
+                        sc.next();
+                        System.out.print("Introduce un número del 1-3: ");
+                    }
 
                     objetos = sc.nextInt();
 
@@ -230,7 +245,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                                 System.out.println(Arrays.toString(inventario.inventarioJon(a)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 
@@ -286,7 +304,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioJon(a)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 
@@ -362,7 +383,10 @@ public class Juego_de_Tronos {
 
                     System.out.println(Arrays.toString(inventario.inventarioJon(a)));
 
-                    batalla.leerEntero();
+                    while (!sc.hasNextInt()) {
+                        sc.next();
+                        System.out.print("Introduce un número del 1-3: ");
+                    }
 
                     objetos = sc.nextInt();
 
@@ -375,7 +399,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioJon(a)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 
@@ -430,7 +457,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioJon(b)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                            sc.next();
+                            System.out.print("Introduce un número del 1-3: ");
+                        }
 
                             opciones = sc.nextInt();
 
@@ -524,7 +554,10 @@ public class Juego_de_Tronos {
             System.out.println(YELLOW + "2. Yunkai " + RESET);
             System.out.println(BLUE + "3. Astapor" + RESET);
 
-            batalla.leerEntero();
+            while (!sc.hasNextInt()) {
+                sc.next();
+                System.out.print("Introduce un número del 1-3: ");
+            }
 
             opciones2 = sc.nextInt();
 
@@ -548,7 +581,10 @@ public class Juego_de_Tronos {
 
                 System.out.println(Arrays.toString(inventario.inventarioDanny(0)));
 
-                batalla.leerEntero();
+                    while (!sc.hasNextInt()) {
+                        sc.next();
+                        System.out.print("Introduce un número del 1-3: ");
+                    }
 
                 objetos = sc.nextInt();
 
@@ -565,7 +601,10 @@ public class Juego_de_Tronos {
                         imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                         System.out.println(Arrays.toString(inventario.inventarioDanny(a)));
 
-                        batalla.leerEntero();
+                        while (!sc.hasNextInt()) {
+                            sc.next();
+                            System.out.print("Introduce un número del 1-3: ");
+                        }
 
                         opciones = sc.nextInt();
 
@@ -650,7 +689,10 @@ public class Juego_de_Tronos {
                         imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                         System.out.println(Arrays.toString(inventario.inventarioDanny(a)));
 
-                        batalla.leerEntero();
+                        while (!sc.hasNextInt()) {
+                            sc.next();
+                            System.out.print("Introduce un número del 1-3: ");
+                        }
 
                         opciones = sc.nextInt();
 
@@ -723,7 +765,10 @@ public class Juego_de_Tronos {
 
                     System.out.println(Arrays.toString(inventario.inventarioDanny(0)));
 
-                    batalla.leerEntero();
+                    while (!sc.hasNextInt()) {
+                        sc.next();
+                        System.out.print("Introduce un número del 1-3: ");
+                    }
 
                     objetos = sc.nextInt();
 
@@ -747,7 +792,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioDanny(b)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 
@@ -821,7 +869,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioDanny(c)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 
@@ -895,7 +946,10 @@ public class Juego_de_Tronos {
 
                     System.out.println(Arrays.toString(inventario.inventarioDanny(0)));
 
-                    batalla.leerEntero();
+                    while (!sc.hasNextInt()) {
+                        sc.next();
+                        System.out.print("Introduce un número del 1-3: ");
+                    }
 
                     objetos = sc.nextInt();
 
@@ -908,7 +962,10 @@ public class Juego_de_Tronos {
                             System.out.println(YELLOW + "1. QUEMAR LA CIUDAD" + RESET);
                             System.out.println(GREEN + "2. INTENTAR LLEGAR CON EL DRAGÓN AL CENTRO DE LA CIUDAD Y HACERTE CON LA CORONA");
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             dragon = sc.nextInt();
 
@@ -926,7 +983,10 @@ public class Juego_de_Tronos {
                                 imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                                 System.out.println(Arrays.toString(inventario.inventarioDanny(c)));
 
-                                batalla.leerEntero();
+                                while (!sc.hasNextInt()) {
+                                    sc.next();
+                                    System.out.print("Introduce un número del 1-3: ");
+                                }
 
                                 opciones = sc.nextInt();
 
@@ -1040,7 +1100,10 @@ public class Juego_de_Tronos {
             System.out.println(YELLOW + "2. Pueblo de los salvajes" + RESET);
             System.out.println(RED + "3. Casa Craster" + RESET);
 
-            batalla.leerEntero();
+            while (!sc.hasNextInt()) {
+                sc.next();
+                System.out.print("Introduce un número del 1-3: ");
+            }
 
             opciones3 = sc.nextInt();
 
@@ -1067,7 +1130,10 @@ public class Juego_de_Tronos {
 
                     System.out.println(Arrays.toString(inventario.inventarioReyNoche(0)));
 
-                    batalla.leerEntero();
+                    while (!sc.hasNextInt()) {
+                        sc.next();
+                        System.out.print("Introduce un número del 1-3: ");
+                    }
 
                     objetos = sc.nextInt();
 
@@ -1081,7 +1147,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento("\n1. Pasar directamente a por el rey", 10);
                             imprimir.imprimirLento("2.Acabar con todo el pueblo", 10);
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             decision = sc.nextInt();
 
@@ -1098,7 +1167,10 @@ public class Juego_de_Tronos {
                                     imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                                     System.out.println(Arrays.toString(inventario.inventarioReyNoche(a)));
 
-                                    batalla.leerEntero();
+                                    while (!sc.hasNextInt()) {
+                                        sc.next();
+                                        System.out.print("Introduce un número del 1-3: ");
+                                    }
 
                                     opciones = sc.nextInt();
 
@@ -1173,7 +1245,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioReyNoche(b)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 
@@ -1247,7 +1322,10 @@ public class Juego_de_Tronos {
 
                     System.out.println(Arrays.toString(inventario.inventarioReyNoche(0)));
 
-                    batalla.leerEntero();
+                    while (!sc.hasNextInt()) {
+                        sc.next();
+                        System.out.print("Introduce un número del 1-3: ");
+                    }
 
                     objetos = sc.nextInt();
 
@@ -1266,7 +1344,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioReyNoche(b)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 
@@ -1326,7 +1407,10 @@ public class Juego_de_Tronos {
                             System.out.println(YELLOW + "1. QUEMAR LA CIUDAD" + RESET);
                             System.out.println(GREEN + "2. INTENTAR LLEGAR CON EL DRAGÓN AL CENTRO DEL PUEBLO Y HACERTE CON TODO");
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             dragon = sc.nextInt();
 
@@ -1344,7 +1428,10 @@ public class Juego_de_Tronos {
                                 imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                                 System.out.println(Arrays.toString(inventario.inventarioReyNoche(c)));
 
-                                batalla.leerEntero();
+                                while (!sc.hasNextInt()) {
+                                    sc.next();
+                                    System.out.print("Introduce un número del 1-3: ");
+                                }
 
                                 opciones = sc.nextInt();
 
@@ -1431,7 +1518,10 @@ public class Juego_de_Tronos {
 
                     System.out.println(Arrays.toString(inventario.inventarioReyNoche(0)));
 
-                    batalla.leerEntero();
+                    while (!sc.hasNextInt()) {
+                        sc.next();
+                        System.out.print("Introduce un número del 1-3: ");
+                    }
 
                     objetos = sc.nextInt();
 
@@ -1443,7 +1533,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioReyNoche(a)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 
@@ -1507,7 +1600,10 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioReyNoche(b)));
 
-                            batalla.leerEntero();
+                            while (!sc.hasNextInt()) {
+                                sc.next();
+                                System.out.print("Introduce un número del 1-3: ");
+                            }
 
                             opciones = sc.nextInt();
 

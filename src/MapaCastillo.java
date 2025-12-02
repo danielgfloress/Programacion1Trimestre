@@ -17,7 +17,7 @@ public class MapaCastillo {
         int col = 0;
         int filaHabitacion = 0;
         int colHabitacion = 3;
-        int contador = 3;
+        int contador = 5;
 
         System.out.println("\nMapa castillo:");
         for (int i = 0; i < mapa.length; i++) {
