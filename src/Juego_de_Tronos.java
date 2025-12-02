@@ -427,6 +427,63 @@ public class Juego_de_Tronos {
 
                             imprimir.imprimirLento(YELLOW + "Has mandado a tu lobo a inspeccionar la zona, aunque los guardias le detectan y...\nHAN RECONOCIDO A FANTASMA y te invitan a entrar, reclamas su ejército y te nombran Rey en el Norte. Lo único malo es que Fantasma ha encontrado su hábitat y no te acompañará" + RESET,10);
                             imprimir.imprimirLento(BLUE + "A POR DESEMBARCO REY EN EL NORTE" + RESET,10);
+                            imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                            System.out.println(Arrays.toString(inventario.inventarioJon(b)));
+
+                            batalla.leerEntero();
+
+                            opciones = sc.nextInt();
+
+                            switch (opciones) {
+
+                                case 1:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu espada, la cual con ella has acabado con más de 200 personas de Desembarco hasta encontrate con el Rey...\nPrepárate para la batalla\n\nMUCHA SUERTE" + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+
+                                    break;
+
+                                case 2:
+
+                                    imprimir.imprimirLento(RED + "Ese hueco de tu inventario estaba vacío y de tanto buscarlo te has vuelto loco...\nTe han quitado el titulo de Rey en el Norte y tu gente ya no te sigue."+RESET,10);
+                                    imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+
+
+                                    break;
+
+                                case 3:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu ejército del Norte que es el más poderoso de los 7 Reinos y has conseguido entrar en la muralla de Desembarco. Ahora vas a por el Rey a reclamar tu corona\n\nMUCHA SUERTE" + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                default:
+
+                                    juego.perderTexto();
+                                    break;
+
+                            }
 
                             break;
 
@@ -450,7 +507,6 @@ public class Juego_de_Tronos {
             }
 
         }
-
 
         else if (opciones == 2) {
 
@@ -505,7 +561,63 @@ public class Juego_de_Tronos {
                         imprimir.imprimirLento(RED + "\nHAS ELEGIDO USAR A TUS DRAGONES\n" + RESET, 10);
                         imprimir.imprimirLento(RED + "La batalla ha comenzado y llegas con tus dragones. El pueblo de la Bahía de los esclavos se queda aterrorizado y comienzas a quemar todo lo que te encuentras en tu camino derrotando a su ejército y haciéndote con la Bahía de los esclavos. Sin embargo, derrotan a tus dragones y avanzas sin ellos." + RESET, 10);
                         imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
+                        imprimir.imprimirLento(BLUE + "A POR DESEMBARCO REINA" + RESET,10);
+                        imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                        System.out.println(Arrays.toString(inventario.inventarioDanny(a)));
 
+                        batalla.leerEntero();
+
+                        opciones = sc.nextInt();
+
+                        switch (opciones) {
+
+                            case 1:
+
+                                imprimir.imprimirLento(RED + "Ese hueco de tu inventario estaba vacío y ya tenías todo planeado para atacar con tus 3 dragones, no has podido hacer nada poque era tarde y te han atacado..."+RESET,10);
+                                imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+
+                                break;
+
+                            case 2:
+
+                                imprimir.imprimirLento(RED + "Has elegido usar tu ejército de esclavos, has acabado con sus filas y te has conseguido plantar cara a cara con el Rey...\nPrepárate para la batalla\n\nMUCHA SUERTE" + RESET,10);
+                                imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                batallaRey = batalla.batalla();
+
+                                if (!batallaRey) {
+                                    System.out.println(RED + "HAS PERDIDO" + RESET);
+                                    break;
+                                }
+
+                                imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+
+                                break;
+
+                            case 3:
+
+                                imprimir.imprimirLento(RED + "Has elegido usar a Jorah el cual te ha ayudado a llegar a manos del Rey pero justo cuando el Rey te iba a matar se pone en medio y se sacrifica por ti. \nVenga a Jorah y acaba con él" + RESET,10);
+                                imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                batallaRey = batalla.batalla();
+
+                                if (!batallaRey) {
+                                    System.out.println(RED + "HAS PERDIDO" + RESET);
+                                    break;
+                                }
+
+                                imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                break;
+
+                            default:
+
+                                juego.perderTexto();
+                                break;
+
+                        }
 
                         break;
                     case 2:
@@ -535,6 +647,55 @@ public class Juego_de_Tronos {
 
                         imprimir.imprimirLento(BLUE + "\n\nENHORABUENA, HAS CONSEGUIDO HACERTE CON LA BAHÍA DE LOS ESCLAVOS Y TU EJÉRCITO HA INCREMENTADO SU FUERZA Y SE HA HECHO MÁS GRANDE" + RESET, 10);
                         imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
+                        imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                        System.out.println(Arrays.toString(inventario.inventarioDanny(a)));
+
+                        batalla.leerEntero();
+
+                        opciones = sc.nextInt();
+
+                        switch (opciones) {
+
+                            case 1:
+
+                                imprimir.imprimirLento(RED + "Has elegido usar tus dragones y has quemado toda la ciudad, lo típico de una Reina loca...\n\nTe han traicionado por loca" + RESET,10);
+                                imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+                                break;
+
+                            case 2:
+
+                                imprimir.imprimirLento(RED + "Has elegido usar tu ejército que es más poderso y está más descansado que nunca. \nConsigues estar cara a cara con el Rey. \nPrepárate para pelear con el Rey" + RESET,10);
+                                imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                batallaRey = batalla.batalla();
+
+                                if (!batallaRey) {
+                                    System.out.println(RED + "HAS PERDIDO" + RESET);
+                                    break;
+                                }
+
+                                imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                break;
+
+                            case 3:
+
+                                imprimir.imprimirLento(RED + "Ese hueco de tu inventario estaba vacío , como consecuencia se han enterado y te han atacado ..."+RESET,10);
+                                imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+                                break;
+
+                            default:
+
+                                juego.perderTexto();
+                                break;
+
+                        }
+
+
+
+                        break;
 
                     default:
                         System.out.println("Ese objeto no está en tu inventario");
@@ -583,6 +744,60 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento(GREEN + "TRAS TRES DÍAS DE BATALLA TU EJÉRCITO HA SIDO CAPAZ DE VENCER AL PUEBLO DE YUNKAI" + RESET, 10);
                             imprimir.imprimirLento(GREEN + "SIN EMBARGO...\n HAS PERDIDO TU EJÉRCITO Y TODAVÍA TE QUEDA HACERTE CON EL TRONO DE HIERRO, TEN CUIDADO CON TUS PRÓXIMAS ELECCIONES "+RESET, 10);
                             imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
+                            imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                            System.out.println(Arrays.toString(inventario.inventarioDanny(b)));
+
+                            batalla.leerEntero();
+
+                            opciones = sc.nextInt();
+
+                            switch (opciones) {
+
+                                case 1:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tus dragones y vuelas hasta el centro de ciudad arrasando todo por tu camino Hasta llegar al castillo donde se encuentra el Rey. \nConsigues estar cara a cara con el Rey. \nPrepárate para pelear con el Rey" + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                case 2:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu ejército pero ya lo habías usado anteriormente y te quedas sin un plan ofensivo.\nEn el tiempo que tardas en pensar otro plan te atacan y te derrotan" + RESET,10);
+                                    imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+                                    break;
+
+                                case 3:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar a Jorah y avanzáis hasta el lugar en el que se encuentra el Rey, le mandas pelear a Jorah pero muere y ahora solo quedas tu contra él. \nAcaba con él" + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                default:
+
+                                    juego.perderTexto();
+                                    break;
+
+                            }
 
 
                             break;
@@ -603,7 +818,51 @@ public class Juego_de_Tronos {
 
                             imprimir.imprimirLento(BLUE + "HAS ACERTADO EL ACERTIJO Y JORAH TIENE UNA PELEA CARA A CARA CON EL REY CUANDO DE REPENTE...\nE DESHACE DE ÉL EN UN ABRIR Y CERRAR DE OJOARREBATANDOLE LA CORONA Y ENTREGANDOTELA JUSTO ANTES DE MORIR...\nEN SU PELEA CON EL REY HABÍA SUFRIDO GRAVES HERIDAS Y HA FALLECIDO, PERO AHORA NO HAY TIEMPO DE PENSAR EN ESO" + RESET, 10);
                             imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
+                            imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                            System.out.println(Arrays.toString(inventario.inventarioDanny(c)));
 
+                            batalla.leerEntero();
+
+                            opciones = sc.nextInt();
+
+                            switch (opciones) {
+
+                                case 1:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tus dragones y vuelas hasta el centro de ciudad arrasando todo por tu camino Hasta llegar al castillo donde se encuentra el Rey. \nConsigues estar cara a cara con el Rey. \nPrepárate para pelear con el Rey" + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                case 2:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu ejército pero sin una estrategia no te ha servido de nada por lo que te arrasan y acaban con tu ejército." + RESET,10);
+                                    imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+                                    break;
+
+                                case 3:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar a Jorah, pero ya no está en tus filas por lo que nadie ha diseñado una estrategia concreta para atacar Desembarco y atacas a lo loco por lo que fracasas." + RESET,10);
+                                    imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+                                    break;
+
+                                default:
+
+                                    juego.perderTexto();
+                                    break;
+
+                            }
 
                             break;
 
@@ -664,6 +923,63 @@ public class Juego_de_Tronos {
                                 dragones.dragonOpcion(dragon);
                                 imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
 
+                                imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                                System.out.println(Arrays.toString(inventario.inventarioDanny(c)));
+
+                                batalla.leerEntero();
+
+                                opciones = sc.nextInt();
+
+                                switch (opciones) {
+
+                                    case 1:
+
+                                        imprimir.imprimirLento(RED + "Has elegido usar tus dragones y vuelas hasta el centro de ciudad arrasando todo por tu camino Hasta llegar al castillo donde se encuentra el Rey. \nConsigues estar cara a cara con el Rey. \nPrepárate para pelear con el Rey" + RESET,10);
+                                        imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                        batallaRey = batalla.batalla();
+
+                                        if (!batallaRey) {
+                                            System.out.println(RED + "HAS PERDIDO" + RESET);
+                                            break;
+                                        }
+
+                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                        break;
+
+                                    case 2:
+
+                                        imprimir.imprimirLento(RED + "Has elegido usar tu ejército y tras días de batlla has conseguido vencer y llegar cara a cara con el Rey.\nAcaba con él" + RESET,10);
+                                        imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                        batallaRey = batalla.batalla();
+
+                                        if (!batallaRey) {
+                                            System.out.println(RED + "HAS PERDIDO" + RESET);
+                                            break;
+                                        }
+
+                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                        break;
+
+                                    case 3:
+
+                                        imprimir.imprimirLento(RED + "Has elegido usar a Jorah, pero ya no está en tus filas por lo que nadie ha diseñado una estrategia concreta para atacar Desembarco y atacas a lo loco por lo que fracasas." + RESET,10);
+                                        imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+                                        break;
+
+                                    default:
+
+                                        juego.perderTexto();
+                                        break;
+
+                                }
+
+                                break;
+
                             }else{
 
                                 dragones.dragonOpcion(dragon);
@@ -671,7 +987,6 @@ public class Juego_de_Tronos {
                                 break;
                             }
 
-                            break;
 
                         case 2:
 
@@ -779,6 +1094,64 @@ public class Juego_de_Tronos {
                                 case 2:
                                     imprimir.imprimirLento("Has arrasado con todo el pueblo",10);
                                     imprimir.imprimirLento("Vas a por el rey y le cortas la cabeza. Has conseguido el trono",10);
+                                    imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
+                                    imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                                    System.out.println(Arrays.toString(inventario.inventarioReyNoche(a)));
+
+                                    batalla.leerEntero();
+
+                                    opciones = sc.nextInt();
+
+                                    switch (opciones) {
+
+                                        case 1:
+
+                                            imprimir.imprimirLento(RED + "Has elegido usar tu lanza pero ya la habías usado por lo que lanzas un cuchillo normal y no sirve de nada, por lo que te sorprenden al no congelar a nadie y acaban contigo." + RESET,10);
+                                            imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+                                            break;
+
+                                        case 2:
+
+                                            imprimir.imprimirLento(RED + "Has elegido usar tu poder de resurrección en la mitad de la batalla y todos los muertos de la ciudad se unen a tu ejército permitiéndote llegar hasta el rey.\nPrepárate para la batalla." + RESET,10);
+                                            imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                            batallaRey = batalla.batalla();
+
+                                            if (!batallaRey) {
+                                                System.out.println(RED + "HAS PERDIDO" + RESET);
+                                                break;
+                                            }
+
+                                            imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+
+                                            break;
+
+                                        case 3:
+
+                                            imprimir.imprimirLento(RED + "Has elegido usar tu dragón en Desembarco y has congelado la ciudad lo que te permite pasar hasta donde está el Rey, pero justo antes de llegar a él se descongela todo y te tienes que enfrentar a él." + RESET,10);
+                                            imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                            batallaRey = batalla.batalla();
+
+                                            if (!batallaRey) {
+                                                System.out.println(RED + "HAS PERDIDO" + RESET);
+                                                break;
+                                            }
+
+                                            imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                            break;
+
+                                        default:
+
+                                            juego.perderTexto();
+                                            break;
+
+                                    }
+
+
                                     break;
 
                                 default:
@@ -796,6 +1169,55 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento("Has elegido usar tu Dragon",10);
                             imprimir.imprimirLento("Con el derrites el muro y quemas a toda la gente que hay",10);
                             imprimir.imprimirLento("Consigues llegar al rey y quitarle el trono\nAhora el trono es tuyo",10);
+                            imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
+                            imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                            System.out.println(Arrays.toString(inventario.inventarioReyNoche(b)));
+
+                            batalla.leerEntero();
+
+                            opciones = sc.nextInt();
+
+                            switch (opciones) {
+
+                                case 1:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu lanza y consigues abrir un camino helado hasta donde se encuentra el Rey  .\nPrepárate para la batalla." + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                case 2:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu poder en mitad de la batalla y te confías en que se van a levantar, mientras te quedas esparando que se levanten van rápido a por ti y te matan." + RESET,10);
+                                    imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+
+                                    break;
+
+                                case 3:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu dragón en Desembarco y has congelado la ciudad lo que te permite pasar hasta donde está el Rey, pero justo antes de llegar a él se descongela todo y te tienes que enfrentar a él." + RESET,10);
+                                    System.out.println(RED + "HAS PERDIDO"+ RESET);
+
+                                    break;
+
+                                default:
+
+                                    juego.perderTexto();
+                                    break;
+
+                            }
+
+
                             break;
 
                         default:
@@ -840,6 +1262,62 @@ public class Juego_de_Tronos {
                         case 2:
                             imprimir.imprimirLento("Has elegido usar el poder de resureccion",10);
                             imprimir.imprimirLento("Has revivido a todos lo muertos de la zona y se han aliado a tu ejercito\nTras derrotar a todos tu ejercito ha aumentado",10);
+                            imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
+                            imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                            System.out.println(Arrays.toString(inventario.inventarioReyNoche(b)));
+
+                            batalla.leerEntero();
+
+                            opciones = sc.nextInt();
+
+                            switch (opciones) {
+
+                                case 1:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu lanza y consigues abrir un camino helado hasta donde se encuentra el Rey  .\nPrepárate para la batalla." + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                case 2:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu poder en mitad de la batalla, pero ya no lo tienes y te confías en que se van a levantar, mientras te quedas esparando que se levanten van rápido a por ti y te matan." + RESET,10);
+                                    imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+
+                                    break;
+
+                                case 3:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu dragón en Desembarco y has congelado la ciudad lo que te permite pasar hasta donde está el Rey, pero justo antes de llegar a él se descongela todo y te tienes que enfrentar a él." + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                default:
+
+                                    juego.perderTexto();
+                                    break;
+
+                            }
 
                             break;
 
@@ -862,6 +1340,61 @@ public class Juego_de_Tronos {
 
                                 dragones.dragonOpcion(dragon);
                                 imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES QUEDARTE CON TODO EL EJERCITO" + RESET, 10);
+                                imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
+                                imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                                System.out.println(Arrays.toString(inventario.inventarioReyNoche(c)));
+
+                                batalla.leerEntero();
+
+                                opciones = sc.nextInt();
+
+                                switch (opciones) {
+
+                                    case 1:
+
+                                        imprimir.imprimirLento(RED + "Has elegido usar tu lanza y consigues abrir un camino helado hasta donde se encuentra el Rey  .\nPrepárate para la batalla." + RESET,10);
+                                        imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                        batallaRey = batalla.batalla();
+
+                                        if (!batallaRey) {
+                                            System.out.println(RED + "HAS PERDIDO" + RESET);
+                                            break;
+                                        }
+
+                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                        break;
+
+                                    case 2:
+
+                                        imprimir.imprimirLento(RED + "Estás peleando en la batalla de Desembarco y vas perdiendo la batalla...\n¡Usas el poder de resurrección!, tu ejército se levanta y consigues llegar donde está el Rey. Prepárate para pelear con él." + RESET,10);
+                                        imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                        batallaRey = batalla.batalla();
+
+                                        if (!batallaRey) {
+                                            System.out.println(RED + "HAS PERDIDO" + RESET);
+                                            break;
+                                        }
+
+                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                        break;
+
+                                    case 3:
+
+                                        imprimir.imprimirLento(RED + "Has elegido usar tu dragón pero ya no lo tienes por lo que cuando vas a montarte en él descubres que no está  te tienden una emboscada." + RESET,10);
+                                        imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+                                        break;
+
+                                    default:
+
+                                        juego.perderTexto();
+                                        break;
+
+                                }
 
                             }else{
 
@@ -906,12 +1439,127 @@ public class Juego_de_Tronos {
                         case 1:
                             imprimir.imprimirLento("\nHas elegido tu lanza",10);
                             imprimir.imprimirLento("Antes de entrar hay una puerta con una contraseña debes de descubrirla para poder entrar y acabar con todos", 10);
+                            imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
+                            imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                            System.out.println(Arrays.toString(inventario.inventarioReyNoche(a)));
+
+                            batalla.leerEntero();
+
+                            opciones = sc.nextInt();
+
+                            switch (opciones) {
+
+                                case 1:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu lanza pero ya la habías usado por lo que lanzas un cuchillo normal y no sirve de nada, por lo que te sorprenden al no congelar a nadie y acaban contigo." + RESET,10);
+                                    imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+                                    break;
+
+                                case 2:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu poder de resurrección en la mitad de la batalla y todos los muertos de la ciudad se unen a tu ejército permitiéndote llegar hasta el rey.\nPrepárate para la batalla." + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+
+                                    break;
+
+                                case 3:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu dragón en Desembarco, quemas todo y te bajas justo antes de encontrarte con el Rey\nPrepárate para pelear contra él." + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                default:
+
+                                    juego.perderTexto();
+                                    break;
+
+                            }
+
+                            break;
 
 
                         case 2:
                             imprimir.imprimirLento("Has elegido usar el poder de resureccion",10);
                             imprimir.imprimirLento("Todos los hijos varones se han convertido en caminantes",10);
                             imprimir.imprimirLento("Llegas a un acuerdo para quedarse a todos sus hijos",10);
+                            imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
+                            imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
+                            System.out.println(Arrays.toString(inventario.inventarioReyNoche(b)));
+
+                            batalla.leerEntero();
+
+                            opciones = sc.nextInt();
+
+                            switch (opciones) {
+
+                                case 1:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu lanza con la que atraviesas su ejército." + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                case 2:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu poder en mitad de la batalla, pero ya no lo tienes y te confías en que se van a levantar, mientras te quedas esparando que se levanten van rápido a por ti y te matan." + RESET,10);
+                                    imprimir.imprimirLento(RED + "HAS PERDIDO"+RESET,100);
+
+
+                                    break;
+
+                                case 3:
+
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu dragón en Desembarco y has congelado la ciudad lo que te permite pasar hasta donde está el Rey, pero justo antes de llegar a él se descongela todo y te tienes que enfrentar a él." + RESET,10);
+                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+
+                                    batallaRey = batalla.batalla();
+
+                                    if (!batallaRey) {
+                                        System.out.println(RED + "HAS PERDIDO" + RESET);
+                                        break;
+                                    }
+
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+
+                                    break;
+
+                                default:
+
+                                    juego.perderTexto();
+                                    break;
+
+                            }
+
 
                             break;
 
