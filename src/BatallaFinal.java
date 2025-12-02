@@ -43,9 +43,7 @@ public class BatallaFinal {
     }
 
     void mostrarEstado() {
-        imprimir.imprimirLento(BLUE +
-                "\nTu vida: " + vidaJugador +
-                "\nVida del Rey: " + vidaRey + RESET, 20);
+        imprimir.imprimirLento(BLUE + "\nTu vida: " + vidaJugador + RESET + RED+"\nVida del Rey: " + vidaRey + RESET, 20);
     }
 
     void mostrarOpciones() {

@@ -981,7 +981,7 @@ public class Juego_de_Tronos {
                                 imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
 
                                 imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
-                                System.out.println(Arrays.toString(inventario.inventarioDanny(c)));
+                                System.out.println(Arrays.toString(inventario.inventarioDanny(a)));
 
                                 while (!sc.hasNextInt()) {
                                     sc.next();
@@ -1165,7 +1165,7 @@ public class Juego_de_Tronos {
                                     imprimir.imprimirLento("Vas a por el rey y le cortas la cabeza. Has conseguido el trono",10);
                                     imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
                                     imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
-                                    System.out.println(Arrays.toString(inventario.inventarioReyNoche(a)));
+                                    System.out.println(Arrays.toString(inventario.inventarioReyNoche(b)));
 
                                     while (!sc.hasNextInt()) {
                                         sc.next();
@@ -1243,7 +1243,7 @@ public class Juego_de_Tronos {
                             imprimir.imprimirLento("Consigues llegar al rey y quitarle el trono\nAhora el trono es tuyo",10);
                             imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
-                            System.out.println(Arrays.toString(inventario.inventarioReyNoche(b)));
+                            System.out.println(Arrays.toString(inventario.inventarioReyNoche(c)));
 
                             while (!sc.hasNextInt()) {
                                 sc.next();
@@ -1256,7 +1256,7 @@ public class Juego_de_Tronos {
 
                                 case 1:
 
-                                    imprimir.imprimirLento(RED + "Has elegido usar tu lanza y consigues abrir un camino helado hasta donde se encuentra el Rey  .\nPrepárate para la batalla." + RESET,10);
+                                    imprimir.imprimirLento(RED + "Has elegido usar tu lanza y consigues abrir un camino helado hasta donde se encuentra el Rey.\nPrepárate para la batalla." + RESET,10);
                                     imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
 
                                     batallaRey = batalla.batalla();
