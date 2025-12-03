@@ -40,7 +40,7 @@ Todos los juegos funcionan por **consola** e interactúan con el usuario mediant
 
 ## 🚗 Como jugar
 
--**Tener instalada Intellij y la versión 17 de Java**
--**Entrar a la clase Iniciar**
--**Compilar**
--**Disfrutar**
+- **Tener instalada Intellij y la versión 17 de Java**
+- **Entrar a la clase Iniciar**
+- **Compilar**
+- **Disfrutar**
