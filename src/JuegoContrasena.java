@@ -19,6 +19,10 @@ public class JuegoContrasena {
             intentos++;
 
             System.out.println("¿En qué día mes y año se lanzó Juego de Tronos?");
+            while (!sc.hasNextInt()) {
+                sc.next();
+                System.out.print("Introduce un número del 1-9: ");
+            }
             adivinar = sc.nextLine();
 
             if (contrasena.charAt(0)>adivinar.charAt(0)){
