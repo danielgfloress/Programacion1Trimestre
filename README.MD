@@ -37,3 +37,10 @@ Todos los juegos funcionan por **consola** e interactúan con el usuario mediant
 
 **1º DAM (Desarrollo de Aplicaciones Multiplataforma) - Módulo de Programación**  
 **Instituto: Xtart**
+
+## 🚗 Como jugar
+
+**Tener instalada Intellij y la versión 17 de Java**
+**Entrar a la clase Iniciar**
+**Compilar**
+**Disfrutar**
