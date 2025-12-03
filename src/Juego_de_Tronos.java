@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 public class Juego_de_Tronos {
-    public static void main(String[] args) {
+    public void juegoTrono() {
 
         final String RESET = "\u001B[0m";
         final String RED = "\u001B[31m";
@@ -20,8 +20,8 @@ public class Juego_de_Tronos {
         Dragon dragones = new Dragon();
         BatallaFinal batalla = new BatallaFinal();
         JuegoContrasena juegoContrasena = new JuegoContrasena();
-        boolean resultadoDelAhorcado;
 
+        boolean resultadoDelAhorcado;
         int opciones;
         int objetos;
         int a = 1;
@@ -31,7 +31,7 @@ public class Juego_de_Tronos {
         boolean batallaRey;
 
 
-        imprimir.imprimirLento("\nComienza la aventura y tienes que hacerte con el trono de hierro, consigue el personaje que más te guste e intenta hacerte con el trono de hierro superando todos los peligros que aparecen por el camino.\n", 10);
+        imprimir.imprimirLento("\nComienza la aventura y tienes que hacerte con el trono de hierro, consigue el personaje que más te guste\n e intenta hacerte con el trono de hierro superando todos los peligros que aparecen por el camino.\n", 10);
 
         System.out.println(YELLOW + "Elige un personaje: " + RESET);
 
@@ -205,7 +205,7 @@ public class Juego_de_Tronos {
                     imprimir.imprimirLento(BLUE + "\n\nHas llegado al Nido de Águilas, la que se encuentra en el trono es tu tía, sin embargo, no está dispuesta a dejarte pasar ni a darte tu ejército"+ RESET,10);
                     System.out.println(GREEN + "Elige un objeto de Jon para enfrentarte a ellos" + RESET);
 
-                    System.out.println(Arrays.toString(inventario.inventarioJon(a)));
+                    System.out.println(Arrays.toString(inventario.inventarioJon(0)));
 
                     while (!sc.hasNextInt()) {
                         sc.next();
@@ -240,10 +240,10 @@ public class Juego_de_Tronos {
 
                             }
 
-                            imprimir.imprimirLento(YELLOW + "Has conseguido entrar en el Nido de Águilas y tras mucho dialogar con tu tí ha cedido a prestarte y ejército para conquistar Desembarco."+ RESET,10);
+                            imprimir.imprimirLento(YELLOW + "Has conseguido entrar en el Nido de Águilas y tras mucho dialogar con tu tía, ha cedido a prestarte y ejército para conquistar Desembarco."+ RESET,10);
                             System.out.println(GREEN + "A POR ELLOS REY"+ RESET);
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
-                                System.out.println(Arrays.toString(inventario.inventarioJon(a)));
+                                System.out.println(Arrays.toString(inventario.inventarioJon(b)));
 
                             while (!sc.hasNextInt()) {
                                 sc.next();
@@ -302,7 +302,7 @@ public class Juego_de_Tronos {
 
                             imprimir.imprimirLento(GREEN + "Tras mucha negociación con tu tía no habéis llegado a ningún acuerdo y has decidido usar tu ejército, el ejército del Nido de Águilas es mucho inferior al tuyo y tras la guerra has conseguido vencer, pero no tienes tiempo de que tu ejército se recupere y partes con tu lobo a Desembarco." + RESET,10);
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
-                            System.out.println(Arrays.toString(inventario.inventarioJon(a)));
+                            System.out.println(Arrays.toString(inventario.inventarioJon(c)));
 
                             while (!sc.hasNextInt()) {
                                 sc.next();
@@ -381,7 +381,7 @@ public class Juego_de_Tronos {
                     imprimir.imprimirLento(BLUE + "\n\nHas llegado a Invernalia, tu antigua casa donde está tu hermano gobernando."+ RESET,10);
                     System.out.println(GREEN + "Elige un objeto de Jon para enfrentarte a ellos" + RESET);
 
-                    System.out.println(Arrays.toString(inventario.inventarioJon(a)));
+                    System.out.println(Arrays.toString(inventario.inventarioJon(0)));
 
                     while (!sc.hasNextInt()) {
                         sc.next();
@@ -417,7 +417,7 @@ public class Juego_de_Tronos {
 
                                 case 2:
 
-                                    imprimir.imprimirLento(GREEN + "Has usado a Fantasma para inspeccionar la zona y decirte una manera de de entrar sin que los guardias te pillen...\nPero justo antes de llegar a ti " + RESET,10);
+                                    imprimir.imprimirLento(GREEN + "Has usado a Fantasma para inspeccionar la zona y decirte una manera de de entrar sin que los guardias te pillen...\nPero justo antes de llegar a ti lo capturan y te quedas sin plan. " + RESET,10);
 
 
 
@@ -460,7 +460,7 @@ public class Juego_de_Tronos {
                             while (!sc.hasNextInt()) {
                             sc.next();
                             System.out.print("Introduce un número del 1-3: ");
-                        }
+                            }
 
                             opciones = sc.nextInt();
 
@@ -630,7 +630,7 @@ public class Juego_de_Tronos {
                                     break;
                                 }
 
-                                imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                imprimir.imprimirLento(GREEN + "=====HAS GANADO REINA=====" + RESET,100);
 
 
                                 break;
@@ -647,7 +647,7 @@ public class Juego_de_Tronos {
                                     break;
                                 }
 
-                                imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                imprimir.imprimirLento(GREEN + "=====HAS GANADO REINA=====" + RESET,100);
 
                                 break;
 
@@ -687,7 +687,7 @@ public class Juego_de_Tronos {
                         imprimir.imprimirLento(BLUE + "\n\nENHORABUENA, HAS CONSEGUIDO HACERTE CON LA BAHÍA DE LOS ESCLAVOS Y TU EJÉRCITO HA INCREMENTADO SU FUERZA Y SE HA HECHO MÁS GRANDE" + RESET, 10);
                         imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
                         imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
-                        System.out.println(Arrays.toString(inventario.inventarioDanny(a)));
+                        System.out.println(Arrays.toString(inventario.inventarioDanny(c)));
 
                         while (!sc.hasNextInt()) {
                             sc.next();
@@ -717,7 +717,7 @@ public class Juego_de_Tronos {
                                     break;
                                 }
 
-                                imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                imprimir.imprimirLento(GREEN + "=====HAS GANADO REINA=====" + RESET,100);
 
                                 break;
 
@@ -744,6 +744,8 @@ public class Juego_de_Tronos {
                         System.out.println("La próxima vez elige una opción correcta");
                         break;
                 }
+
+                break;
 
                 case 2:
 
@@ -813,7 +815,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REINA=====" + RESET,100);
 
                                     break;
 
@@ -836,7 +838,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REINA=====" + RESET,100);
 
                                     break;
 
@@ -864,7 +866,7 @@ public class Juego_de_Tronos {
 
                             }
 
-                            imprimir.imprimirLento(BLUE + "HAS ACERTADO EL ACERTIJO Y JORAH TIENE UNA PELEA CARA A CARA CON EL REY CUANDO DE REPENTE...\nE DESHACE DE ÉL EN UN ABRIR Y CERRAR DE OJOARREBATANDOLE LA CORONA Y ENTREGANDOTELA JUSTO ANTES DE MORIR...\nEN SU PELEA CON EL REY HABÍA SUFRIDO GRAVES HERIDAS Y HA FALLECIDO, PERO AHORA NO HAY TIEMPO DE PENSAR EN ESO" + RESET, 10);
+                            imprimir.imprimirLento(BLUE + "HAS ACERTADO EL ACERTIJO Y JORAH TIENE UNA PELEA CARA A CARA CON EL REY CUANDO DE REPENTE...\nE DESHACE DE ÉL EN UN ABRIR Y CERRAR DE OJO ARREBATANDOLE LA CORONA Y ENTREGANDOTELA JUSTO ANTES DE MORIR...\nEN SU PELEA CON EL REY HABÍA SUFRIDO GRAVES HERIDAS Y HA FALLECIDO, PERO AHORA NO HAY TIEMPO DE PENSAR EN ESO" + RESET, 10);
                             imprimir.imprimirLento(YELLOW + "AHORA YA PUEDES IR A RECLAMAR TU TRONO DE REINA LEGÍTIMA" + RESET, 10);
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioDanny(c)));
@@ -890,7 +892,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REINA=====" + RESET,100);
 
                                     break;
 
@@ -1004,7 +1006,7 @@ public class Juego_de_Tronos {
                                             break;
                                         }
 
-                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REINA=====" + RESET,100);
 
                                         break;
 
@@ -1020,7 +1022,7 @@ public class Juego_de_Tronos {
                                             break;
                                         }
 
-                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REINA=====" + RESET,100);
 
                                         break;
 
@@ -1052,6 +1054,8 @@ public class Juego_de_Tronos {
 
                             imprimir.imprimirLento(GREEN + "\nTU EJÉRITO ERA MÁS PODEROSO Y HAS CONSEGUIDO HACERTE CON LA VICTORIA."+ RESET,10);
                             imprimir.imprimirLento(GREEN + "SIN EMBARGO, EN DESEMBARCO SE ESTÁN HACIENDO MÁS FUERTES Y NO HAY TIEMPO QUE PERDER TIENES QUE AVANZAR DE INMEDIATO PARA DESEMBARCO SIN TU EJÉRCITO DEBIDO AL CANSANCIO EN EL CAMPO DE BATALLA."+ RESET,10);
+                            System.out.println(RED + "SIN EJÉRCITO NO SE PUEDE CONQUISTAR DESEMBARCO, NO ERES LO SUFICIENTEMENTE PODEROSA");
+                            imprimir.imprimirLento(RED + "HAS PERDIDO" + RESET , 100);
 
 
                             break;
@@ -1165,7 +1169,7 @@ public class Juego_de_Tronos {
                                     imprimir.imprimirLento("Vas a por el rey y le cortas la cabeza. Has conseguido el trono",10);
                                     imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
                                     imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
-                                    System.out.println(Arrays.toString(inventario.inventarioReyNoche(b)));
+                                    System.out.println(Arrays.toString(inventario.inventarioReyNoche(a)));
 
                                     while (!sc.hasNextInt()) {
                                         sc.next();
@@ -1195,7 +1199,7 @@ public class Juego_de_Tronos {
                                                 break;
                                             }
 
-                                            imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                            imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
 
                                             break;
@@ -1212,7 +1216,7 @@ public class Juego_de_Tronos {
                                                 break;
                                             }
 
-                                            imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                            imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
                                             break;
 
@@ -1232,6 +1236,9 @@ public class Juego_de_Tronos {
                                     break;
 
                             }
+
+                            break;
+
                         case 2:
                             imprimir.imprimirLento("Has elegido usar el poder de resureccion\nPero en el muro queman a los muertos por lo tanto no ha servido para nada y tu ejercito es mas debil que el del muro",10);
                             System.out.println(RED + "HAS PERDIDO" +RESET);
@@ -1266,7 +1273,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
                                     break;
 
@@ -1365,7 +1372,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
                                     break;
 
@@ -1389,7 +1396,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
                                     break;
 
@@ -1449,7 +1456,7 @@ public class Juego_de_Tronos {
                                             break;
                                         }
 
-                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
                                         break;
 
@@ -1465,7 +1472,7 @@ public class Juego_de_Tronos {
                                             break;
                                         }
 
-                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                        imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
                                         break;
 
@@ -1529,6 +1536,15 @@ public class Juego_de_Tronos {
                         case 1:
                             imprimir.imprimirLento("\nHas elegido tu lanza",10);
                             imprimir.imprimirLento("Antes de entrar hay una puerta con una contraseña debes de descubrirla para poder entrar y acabar con todos", 10);
+                            boolean contra = juegoContrasena.contrasena();
+
+                            if (!contra){
+
+                                juego.perderTexto();
+                                break;
+
+                            }
+                            imprimir.imprimirLento(BLUE + "Has conseguido pasar por la puerta y hacerte con todos los hijos varones de Casa Craster, ahora tu ejército es más fuerte."+RESET,10);
                             imprimir.imprimirLento(BLUE + "\nDirígete a Desembarco\n"+RESET,10);
                             imprimir.imprimirLento(GREEN + "\n\nHas llegado a Desembarco del Rey, ahora usa otro objeto para acceder al trono. "+RESET,10);
                             System.out.println(Arrays.toString(inventario.inventarioReyNoche(a)));
@@ -1552,7 +1568,7 @@ public class Juego_de_Tronos {
                                 case 2:
 
                                     imprimir.imprimirLento(RED + "Has elegido usar tu poder de resurrección en la mitad de la batalla y todos los muertos de la ciudad se unen a tu ejército permitiéndote llegar hasta el rey.\nPrepárate para la batalla." + RESET,10);
-                                    imprimir.imprimirLento(RED + "\nEmpieza la batalla con el Rey"+RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS LLEGADO A DESEMBARCO" + RESET,100);
 
                                     batallaRey = batalla.batalla();
 
@@ -1561,7 +1577,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
 
                                     break;
@@ -1578,7 +1594,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
                                     break;
 
@@ -1621,7 +1637,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
                                     break;
 
@@ -1645,7 +1661,7 @@ public class Juego_de_Tronos {
                                         break;
                                     }
 
-                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO REY JON=====" + RESET,100);
+                                    imprimir.imprimirLento(GREEN + "=====HAS GANADO, LOS  CAMINANTES HAN DOMINADO LOS 7 REINOS=====" + RESET,100);
 
                                     break;
 

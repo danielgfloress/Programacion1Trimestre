@@ -8,9 +8,9 @@ public class Inventarios {
 
     public final String vacio= (YELLOW +"vacio" + RESET);
 
-    public final String jon_espada = (RED + "Espada"+ RESET);
-    public final String jon_fantasma = (YELLOW+ "Lobo2"+ RESET);
-    public final String jon_ejercito = (GREEN +"Ejército"+ RESET);
+    public final String jon_espada = (RED + "1. Espada"+ RESET);
+    public final String jon_fantasma = (YELLOW+ "2. Lobo"+ RESET);
+    public final String jon_ejercito = (GREEN +"3. Ejército"+ RESET);
 
     public final String dragones = (RED + "1. Dragones"+ RESET);
     public final String danny_ejercitos =(GREEN + "2. Ejército" + RESET);

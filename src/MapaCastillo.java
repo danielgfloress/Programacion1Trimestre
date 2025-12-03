@@ -129,7 +129,7 @@ public class MapaCastillo {
 
                     }else if (i == filaHabitacion && j == colHabitacion) {
 
-                        System.out.println("Habitación rey");
+                        System.out.println("Rey");
                     }
                     else {
 
