@@ -44,3 +44,31 @@ Todos los juegos funcionan por **consola** e interactúan con el usuario mediant
 - **Entrar a la clase Iniciar**
 - **Compilar**
 - **Disfrutar**
+---
+
+## 📚 Próximas mejoras
+
+Estamos trabajando para seguir ampliando y mejorando el proyecto. Algunas de las ideas que se planean implementar incluyen:
+
+### 1️⃣ Más minijuegos
+- **Trivia de cultura general:** Responde preguntas de diferentes categorías y aumenta tu puntuación.
+- **Laberinto interactivo:** Explora un laberinto virtual tomando decisiones en cada paso.
+- **Simulador de aventuras text-based:** Vive una historia interactiva donde tus decisiones afectan el desarrollo del juego.
+- **Otros juegos clásicos:** Como Memoria, Ahorcado, Carrera de dados o Juego de cartas simple.
+
+### 2️⃣ Guardado de progreso y puntuaciones
+- Implementar un sistema que permita **guardar las puntuaciones** y el progreso del jugador en un archivo.
+- Posibilidad de **cargar partidas anteriores** para continuar el juego donde lo dejaste.
+
+### 3️⃣ Multijugador local
+- Crear minijuegos que permitan competir **entre dos jugadores en la misma consola**.
+- Mostrar turnos y puntuaciones de cada jugador en tiempo real.
+
+### 4️⃣ Interfaz gráfica básica
+- Explorar **Java** para añadir elementos gráficos simples a algunos juegos.
+- Mejorar la interacción y la experiencia visual sin perder la esencia de los juegos por consola.
+
+### 5️⃣ Mejora de la experiencia de usuario
+- Añadir menús iniciales y finales más completos.
+- Incluir instrucciones claras y accesibles para cada minijuego.
+- Añadir efectos de texto, colores y pausas para mejorar la inmersión en los juegos.
